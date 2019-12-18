@@ -31,5 +31,4 @@ The first module will take the first half of the course and will be the focus of
 
 ### Module 1
   - **Datasets:** [Gout]() [Wages]().
-  - **Covariance & Correlation**
-      - 
+  - **Covariance & Correlation:** [examples]()
