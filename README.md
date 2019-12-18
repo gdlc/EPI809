@@ -32,4 +32,4 @@ The first module will take the first half of the course and will be the focus of
 ### Module 1
   - **[Tentative schedule](https://github.com/gdlc/EPI809/blob/master/SCHEDULE_MODULE1.md)**
   - **Datasets:** [Gout]() [Wages]().
-  - **Covariance & Correlation:** [examples]()
+  - **Covariance & Correlation:** [examples](https://github.com/gdlc/EPI809/blob/master/CORRLEATION.md)
