@@ -52,3 +52,10 @@
  cor(x,y)
 
 ```
+
+**Testing**
+
+```r
+ cor.test(x,y)
+ 
+```
