@@ -11,7 +11,10 @@
 | Wed., Jan. 29, 2020  | 7	|12.1|	Comparison between two means using a linear model	| |
 | M., Feb. 3, 2020	   | 	8	|	|Intro to MLR (1 dummy, 1 covariate)	|HW2-posted|
 | Wed., Feb. 5, 2020   | 	9	|12.6	|Multilevel factors: coding, parameter interpretation	| |
-| M., Feb. 10, 2020	   | 	10	| Inference in the MLR (F-test and t-test)|	HW2-due |
+| M., Feb. 10, 2020	   | 	10	| | Inference in the MLR (F-test and t-test)|	 HW2-due |
 | Wed., Feb. 12, 2020  | 	11	|	Interactions: dummy-by-dummy, dummy-by-covariate, polyomials | |	
 | M., Feb. 17, 2020	   | 12	|12.9-12.10	| Mixed models | |	
 | Wed., Feb. 19, 2020  | 	13	|	| | Midterm |	
+
+
+[Home](https://github.com/gdlc/EPI809/blob/master/SCHEDULE_MODULE1.md)
