@@ -4,7 +4,7 @@
 
 **Prerequisites**:	EPI 808, EPI 851, or equivalent.
 
-**[Syllabus]()**
+**[Syllabus](https://github.com/gdlc/EPI809/blob/master/EPI_809_SPRING_2020-syllabus.pdf)**
 
 **Course objective**s: (i) statistical analysis of quantitative variables, including correlation, simple and multiple linear regression, analysis of variance and hypothesis testing in the linear model (t-test and F-test) and (ii) categorical data analysis, including hypothesis testing of proportions, analysis of contingency tables, and logistic regression. 
 
@@ -16,4 +16,24 @@ The course is organized in two modules:
   - **Module 2**: Categorical data analysis, logistic regression (Rosner Chapters 10 & 13)
 
 The first module will take the first half of the course and will be the focus of the midterm. The second module will be covered in the second half of the course and evaluated in the final exam. We will use standard statistical packages such as SAS and R which are available in all computer labs on campus. This will aid in carrying out data analyses far more efficiently, than doing tedious “hand calculations”. Syntax/scripts will be provided. The main focus of will be on implementing these analyses and on interpreting the results obtained from the software. 
+
+
+**Instructors**:
+
+|    |   |
+| ------------- | ------------- |
+| Gustavo de los Campos  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+  - Gustavo de los Campos	775 Woodlot Dr  IQ – building #1311 (517)884-7607
+gustavoc@msu.edu 
+Office hours: ½ hr after class.
+Joseph Gardiner	 909 Wilson Road  Room B601 
+(517) 353.8623 
+gardine3@msu.edu 
+
+Ana I. Vazquez	909 Wilson Rd, Room 627B.
+(517) 353-8623
+avazquez@msu.edu
+Office hours: 2-4 pm. 
 
