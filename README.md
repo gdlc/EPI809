@@ -22,6 +22,14 @@ The first module will take the first half of the course and will be the focus of
 
 |  Instructor  | Office  | Phone | EMail | Office hours |
 | ------------- | ------------- | ------------- | ------------- |------------- |
-| Gustavo de los Campos  | 775 Woodlot Dr  IQ – building #1311|  (517)884-7607 |gustavoc@msu.edu  | ½ hr after class. |
+| Gustavo de los Campos  | 775 Woodlot Room 1311|  (517)884-7607 |gustavoc@msu.edu  | ½ hr after class. |
 | Joseph Gardiner  | 909 Wilson Road  Room B601 |  (517) 353-8623  |gardine3@msu.edu   | TBA |
 | Ana I. Vazquez  | 909 Wilson Rd, Room 627B|  (517) 353-8623 | avazquez@msu.edu | M/W 2-4 pm |
+
+
+## Content
+
+### Module 1
+  - **Datasets:** [Gout]() [Wages]().
+  - **Covariance & Correlation**
+      - 
