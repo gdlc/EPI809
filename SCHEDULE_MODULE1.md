@@ -17,4 +17,4 @@
 | Wed., Feb. 19, 2020  | 	13	|	| | Midterm |	
 
 
-[Home](https://github.com/gdlc/EPI809/blob/master/SCHEDULE_MODULE1.md)
+[Home](https://github.com/gdlc/EPI809)
