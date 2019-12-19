@@ -3,7 +3,16 @@
 **Reading the data and producing descritptive statistics & plots**
 ```r
  DATA=read.table('~/Dropbox/STATCOMP/2018/wage.txt',header=T)
- str(DATA)
+ dim(DATA)  # returns number of rows and columns
+ str(DATA)  # describe the data type and structure
+ head(DATA) # shows the first rows
+ tail(DATA) # same for last rows
+ fix(DATA)  # shows data in an spreadsheet format
+ summary(DATA) # summaries by variable
+
+```
+
+```r
  hist(DATA$Wage,30)
  table(DATA$Education)
  summary(DATA$Wage)
