@@ -6,11 +6,19 @@
 #### In-class 1
 
 Enter the following data into excel
-|ID | X | Y |
-|--|--|--|
-|1|	4.55	|4.99|
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
+| ID | X | Y |
+|-----|----|----|
+|1 |	4.55	| 4.99 |
 |2	| 4.95 |	5.65 |
 | 3	| 4.64 |	5.50 |
+
 
 
 Produce a excel file that computes the mean and variance of each variable and the covariance between the two.
