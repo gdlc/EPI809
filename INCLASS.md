@@ -18,8 +18,13 @@ Enter the following data into excel
 |1 |	4.55	| 4.99 |
 |2	| 4.95 |	5.65 |
 | 3	| 4.64 |	5.50 |
-
-
+| 4 |	4.97	5.10
+| 5	| 4.00 |	4.51
+| 6	| 4.47	| 5.13
+| 7	| 4.87 |	5.27
+| 8	| 4.38	| 4.53
+| 9	| 4.87	| 5.39
+| 10 | 4.59 |	5.08
 
 Produce a excel file that computes the mean and variance of each variable and the covariance between the two.
 
