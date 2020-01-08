@@ -29,6 +29,21 @@ Turn your assigment into D2L
 
 **Proposed solution**
 
+```r
+X=c(4.55, 4.95, 4.64, 4.97, 4, 4.47, 4.87, 4.38, 4.87, 4.59)
+
+Y=c(4.99, 5.65, 5.5, 5.1, 4.51, 5.13, 5.27, 4.53, 5.39, 5.08)
+
+mX=mean(X)
+mY=mean(Y)
+dX=X-mX
+dY=Y-mY
+dXdY=dX*dY
+sum(dXdY)/(length(X)-1)
+
+cov(X,Y)
+
+```
 
 #### In-class 2
 
