@@ -45,18 +45,3 @@ cov(X,Y)
 
 ```
 
-#### In-class 2
-
-**Proposed solution**
-
-
-Read into the R-environment the [gout data set]().
- 
-1.1 Provide univariate summary statistics for all the variables.
-1.2 Provide a scatter plot of serum urate (su) versus age).
-1.3 Use basic basic operators `+`, `^2`, `-`, and `/` to compute the mean and variance of `su` and `age`, and the covaraince between the two.
-
-```r
-
-
-```
