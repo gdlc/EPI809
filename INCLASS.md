@@ -5,12 +5,7 @@
 
 #### In-class 1
 
-Enter the following data into excel
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+Enter the following data into excel or R
 
 
 | ID | X | Y |
@@ -26,9 +21,9 @@ Enter the following data into excel
 | 9	| 4.87	| 5.39 |
 | 10 | 4.59 |	5.08 |
 
-Produce a excel file that computes the mean and variance of each variable and the covariance between the two.
+Produce a excel file or an R-script that computes the mean and variance of each variable and the covariance between the two.
 
-Use only sums, differences, products and power functions (i.e., do not use the functions average(), correl(), etc.)
+Use only sums, differences, products and power functions (i.e., do not use the excel functions `average()`, `correl()`, etc. or the R-functions `mean()`, `var()`, `cov()` )
 
 Turn your assigment into D2L
 
