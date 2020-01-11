@@ -45,13 +45,17 @@ cov(X,Y)
 
 ```
 
-### In-class 1
+### In-class 2
 
 Using the following data:
 
 ```r
-
+ set.seed(195021)
+ n=50
+ x=runif(n)
+ y=x+rnorm(n)/8
+ cor(x,y)
 ```
 
 1) Use `cor.test` to compute the p-value for H0: r>0 Vs Ha: r<=0
-2) Compute the same p-value using `pt` (Hint: see code available in Github, in [CORRELATION.md](https://github.com/gdlc/EPI809/edit/master/CORRELATION.md)
+2) Compute the same p-value using `pt` (Hint: see code available in Github, in [CORRELATION.md](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
