@@ -66,7 +66,6 @@
 
 ```r
  cor.test(x,y)
-
 ```
 
 The following code replicates the output of `cor.test`
