@@ -3,7 +3,7 @@
 ## In-class assigments
 
 
-#### In-class 1
+### In-class 1
 
 Enter the following data into excel or R
 
@@ -45,3 +45,13 @@ cov(X,Y)
 
 ```
 
+### In-class 1
+
+Using the following data:
+
+```r
+
+```
+
+1) Use `cor.test` to compute the p-value for H0: r>0 Vs Ha: r<=0
+2) Compute the same p-value using `pt` (Hint: see code available in Github, in [CORRELATION.md](https://github.com/gdlc/EPI809/edit/master/CORRELATION.md)
