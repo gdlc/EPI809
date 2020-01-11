@@ -62,9 +62,47 @@
 
 ```
 
-**Testing**
+**Inference**
 
 ```r
  cor.test(x,y)
+
+```
+
+The following code replicates the output of `cor.test`
+
+```r
+## Simulating data
+set.seed(195021)
+n=50
+x=runif(n)
+y=x+rnorm(n)
+
+COR=cor(x,y)
+V=(1-COR^2)/(n-2)
+SE=sqrt(V)
+
+cor.test(x,y)
+
+# Let's reproduce the results
+ # t-statistics
+  tstat=COR/SE 
  
+ # CI assuming normality 
+  pt(tstat,df=n-2,lower.tail=F)*2
+  
+ # CI based on Fisher's z-transform
+  Z= 0.5*log((1+COR)/(1-COR))
+  SE.Z=sqrt(1/(n-3))
+
+  # CI for Z
+   CI.Z= Z+c(-1,1)*SE.Z*qnorm(.975) # aprox. 1.96
+  	
+   zInv=function(z,n){
+    	r=(exp(2*z)-1)/(1+exp(2*z))
+    	return(r)
+    
+	}	
+ CI.COR=zInv(CI.Z)
+	
 ```
