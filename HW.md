@@ -2,6 +2,8 @@
 
 ## HW1: Correlation and Linear Regression
 
+**Due Jan 27th in D2L**
+
 **1: Correlation**
 1.1. Using the [gout](https://github.com/gdlc/EPI809/blob/master/gout.txt) data set produce the following summary statistics:
 
