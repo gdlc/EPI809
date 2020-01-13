@@ -77,8 +77,9 @@ n=50
 x=runif(n)
 y=x+rnorm(n)
 
+# Correlation coefficient and it's SE
 COR=cor(x,y)
-V=(1-COR^2)/(n-2)
+V=(1-COR^2)/(n-3)
 SE=sqrt(V)
 
 cor.test(x,y)
@@ -88,7 +89,7 @@ cor.test(x,y)
   tstat=COR/SE 
  
  # CI assuming normality 
-  pt(tstat,df=n-2,lower.tail=F)*2
+  pt(tstat,df=n-3,lower.tail=F)*2
   
  # CI based on Fisher's z-transform
   Z= 0.5*log((1+COR)/(1-COR))
