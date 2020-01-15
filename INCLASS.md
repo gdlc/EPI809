@@ -59,3 +59,11 @@ Using the following data:
 
 1) Use `cor.test` to compute the p-value for H0: r>0 Vs Ha: r<=0
 2) Compute the same p-value using `pt` (Hint: see code available in Github, in [CORRELATION.md](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
+
+
+### In-class 3
+
+Using Galton's data set compute and report:
+  - Correlation between offspring height and mid-parental hight (report point estimate, p-value and 95% CI)
+  - The estimated intercept and slope from the regression of offsping height on mid-parental height (use the `lm()` R-function).
+  - Summarize your conclusions in no more than 2 sentences.
