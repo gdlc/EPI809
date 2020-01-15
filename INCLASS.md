@@ -67,3 +67,24 @@ Using Galton's data set compute and report:
   - Correlation between offspring height and mid-parental hight (report point estimate, p-value and 95% CI)
   - The estimated intercept and slope from the regression of offsping height on mid-parental height (use the `lm()` R-function).
   - Summarize your conclusions in no more than 2 sentences.
+  
+  
+ **Proposed Solution**
+ 
+ ```r
+ DATA=read.table('~/Desktop/GALTON.txt',header=T)
+X=DATA$Midparent
+Y=DATA$Child
+
+## 1st let's compute the OLS coefficients using the formulas discussed in class
+
+b1Hat=cov(X,Y)/var(X)
+b0Hat=mean(Y)-mean(X)*b1Hat
+
+# Now with lm(Y~X), it fits a regression Y=b0+b1*X+E, by least squares
+
+fm=lm(Y~X)
+summary(fm)
+```
+
+There is a modertaly high correlation between child's height and mid-parental height (~0.46) and this correlation is statistically different than zero at a singnificance level of 0.01. On average we expect an increase in 0.65 inches in child's height per additional inch in midparental height.
