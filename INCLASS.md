@@ -57,7 +57,7 @@ Using the following data:
  cor(x,y)
 ```
 
-1) Use `cor.test` to compute the p-value for H0: r>0 Vs Ha: r<=0
+1) Use `cor.test` to compute the p-value for H0: r=0 Vs Ha: r>=0
 2) Compute the same p-value using `pt` (Hint: see code available in Github, in [CORRELATION.md](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
 
 
