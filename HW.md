@@ -13,6 +13,7 @@
    - Summarize in no more than three sentences your findings.
    
 1.2. Report the correlation between SU and Age, p-values for two-sided and a one-sded (HA r>=0) test, and 95 and 99% CI for the correlation. For the CI report both a CI assuming normality and one Fisher's Z-transform.
+
 **2: Linear Regression I**
 
 Reproduce the results of Figure 11.1 of the textbook, including:
