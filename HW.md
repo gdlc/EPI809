@@ -5,14 +5,15 @@
 **Due Jan 27th in D2L**
 
 **1: Correlation**
-1.1. Using the [gout](https://github.com/gdlc/EPI809/blob/master/gout.txt) data set produce the following summary statistics:
 
-   - Mean, SD, quartiles and range for serum uruate (SU) y for Age
-   - A histogram of each the variables listed above.
-   - A scatter plot of SU versus Age
-   - Summarize in no more than three sentences your findings.
+  1.1. Using the [gout](https://github.com/gdlc/EPI809/blob/master/gout.txt) data set produce the following summary statistics:
+
+    - Mean, SD, quartiles and range for serum uruate (SU) y for Age
+    - A histogram of each the variables listed above.
+    - A scatter plot of SU versus Age
+    - Summarize in no more than three sentences your findings.
    
-1.2. Report the correlation between SU and Age, p-values for two-sided and a one-sded (HA r>=0) test, and 95 and 99% CI for the correlation. For the CI report both a CI assuming normality and one Fisher's Z-transform.
+  1.2. Report the correlation between SU and Age, p-values for two-sided and a one-sded (HA r>=0) test, and 95 and 99% CI for the correlation. For the CI report both a CI assuming normality and one Fisher's Z-transform.
 
 **2: Linear Regression I**
 
