@@ -18,15 +18,14 @@
 **2: Linear Regression I**
 
 Reproduce the results of Figure 11.1 of the textbook, including:
-
- 2.1. Parameter estimates
- 2.2. ANOVA Table (example 11.13), and
- 2.3. Plot of Figure 11.1
+  2.1. Parameter estimates
+  2.2. ANOVA Table (example 11.13), and
+  2.3. Plot of Figure 11.1
  
 **3: Linear Regression**
 
- 3.1. Using lm estimate the regression of SU on Age, report parameter estimates, SE and p-values.
- 3.2. Does Age has a significant effect on SU?
- 3.3. Explain with your own words the interpretation of each of the parameters of the model.
- 3.4. Report the predicted SU for individuals of 40, 50, 60, and 70 years.
- 3.5. Summarize your findings (no more than 3 sentences).
+  3.1. Using lm estimate the regression of SU on Age, report parameter estimates, SE and p-values.
+  3.2. Does Age has a significant effect on SU?
+  3.3. Explain with your own words the interpretation of each of the parameters of the model.
+  3.4. Report the predicted SU for individuals of 40, 50, 60, and 70 years.
+  3.5. Summarize your findings (no more than 3 sentences).
