@@ -18,6 +18,7 @@
 **2: Linear Regression I**
 
 Reproduce the results of Figure 11.1 of the textbook, including:
+
  2.1. Parameter estimates
  2.2. ANOVA Table (example 11.13)
  2.3. Plot of Figure 11.1
