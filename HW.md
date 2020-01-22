@@ -31,9 +31,10 @@
 
 **3: Linear Regression II**
 
-Using the data provided in Table  11.1 (pp 459) reproduce the results of Figure 11.1 of the textbook, including:
+Using the data provided in Table  11.1 (p 459), reproduce the results of Figure 11.1 of the textbook, including:
   
-  **3.1.** Parameter estimates
+  **3.1.** Fit the model and report parameter estimates
   
   **3.2.** Using the fitted model report an ANOVA Table (Hint: apply the `anova()` function to the model fitted to obtain your answer in 3.1.
+  
   **3.3.** Using R reproduce the plot of Figure 11.1
