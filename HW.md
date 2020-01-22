@@ -8,7 +8,7 @@
   
   **1.1.** Using the [gout](https://github.com/gdlc/EPI809/blob/master/gout.txt) data set produce the following summary statistics:
   
-    * Mean, SD, quartiles and range for serum uruate (SU) and for Age
+    * Mean, SD, quartiles and range for serum uruate (SU) and for Age.
     * A histogram of each the variables listed above.
     * A scatter plot of SU versus Age
     * Summarize in no more than three sentences your findings.
