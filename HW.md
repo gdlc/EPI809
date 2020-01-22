@@ -35,6 +35,6 @@ Using the data provided in Table  11.1 (p 459), reproduce the results of Figure 
   
   **3.1.** Fit the model and report parameter estimates
   
-  **3.2.** Using the fitted model report an ANOVA Table (Hint: apply the `anova()` function to the model fitted to obtain your answer in 3.1).
+  **3.2.** Using the fitted model report an ANOVA Table (Hint: apply the `anova()` function to the model fitted to obtain your answer in 3.1). Your results should match those in Table 11.3 of the textbook.
   
   **3.3.** Using R reproduce the plot of Figure 11.1
