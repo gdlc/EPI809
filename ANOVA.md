@@ -38,6 +38,7 @@ Now, let's replicate all the ANOVA results
 
  # The amount of variability explained by the model (i.e., the model sum of squares) is TSS-RSS
   MSS=TSS-RSS
+  # Also equal to: sum((yHat-mean(Y$Child))^2)
 
  # Now compare with the results from the anova function
   anova(fm)
