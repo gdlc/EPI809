@@ -7,6 +7,8 @@ The examples use a simple linear regression model; however, the same approach ca
 ```r
 # Reading the data and checking the resulting data matches what we expect
  Y=read.table('~/Dropbox/809/datasets/galton.txt',header=T)
+ # To show results more clearly, I'll use a subset of the data..
+ Y=Y[1:20,]
  head(Y)
  dim(Y)
  str(Y)
@@ -43,11 +45,22 @@ Now, let's replicate all the ANOVA results
   MSS=TSS-RSS
   # Also equal to: sum((yHat-mean(Y$Child))^2)
 
+ # F-test
+   n=nrow(Y)
+   modelDF=length(coef(fm))-1
+   resDF=n-modelDF-1
+   F=(MSS/modelDF)/(RSS/resDF)
+   pVal=pf(F,df1=modelDF,df2=resDF,lower.tail=F)
+   
  # Now compare with the results from the anova function
   anova(fm)
   TSS
   RSS
   MSS
+  MSS/modelF
+  RSS/resDF
+  F
+  pVal
  
  # The model R-squared is the proportion of variance explained by the model, that is
   R2=MSS/TSS
