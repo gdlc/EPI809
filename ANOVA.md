@@ -1,4 +1,7 @@
+## Analysis of Variance (ANOVA) in the Linear Regression Model
+
 The following code shows how to perform Analysis of Variance (ANOVA) in R using the `lm()` and `anova()` functions.
+The examples use a simple linear regression model; however, the same approach can be used for models involving more than one predictor (i.e., multiple linnear regressions).
 
 
 ```r
