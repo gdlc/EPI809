@@ -49,17 +49,17 @@ Now, let's replicate all the ANOVA results
    n=nrow(Y)
    modelDF=length(coef(fm))-1
    resDF=n-modelDF-1
-   F=(MSS/modelDF)/(RSS/resDF)
-   pVal=pf(F,df1=modelDF,df2=resDF,lower.tail=F)
+   Fstat=(MSS/modelDF)/(RSS/resDF)
+   pVal=pf(Fstat,df1=modelDF,df2=resDF,lower.tail=FALSE)
    
  # Now compare with the results from the anova function
   anova(fm)
   TSS
   RSS
   MSS
-  MSS/modelF
+  MSS/modelDF
   RSS/resDF
-  F
+  Fstat
   pVal
  
  # The model R-squared is the proportion of variance explained by the model, that is
