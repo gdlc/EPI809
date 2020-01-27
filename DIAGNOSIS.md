@@ -5,7 +5,7 @@ After we fit the model we often check the residuals to:
 
   - Identify heteroskedasticity (i.e., heterogeneous error variance)
 
-  - Identify departures from normality, outliers and influential points
+  - Identify departures from normality, outliers, and influential points
 
 ```r
 
