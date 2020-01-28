@@ -34,10 +34,10 @@ Y=read.table('~/Dropbox/809/datasets/wages.txt',header=T)
 SE.D=sqrt(vDiff)
 tStat=D/SE.D
 
-
 ## Now with a linear model
  fm=lm(Wage~Sex,data=Y)
  summary(fm)
  
+ round(c(D,SE.D,tStat,pt(abs(tStat),df=nM+nF-2,lower.tail=F)),4)
 
 ```
