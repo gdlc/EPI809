@@ -89,9 +89,7 @@ cor.test(x,y)
   tstat=COR/SE 
  
  # CI assuming normality 
- 
-  qnorm(mean=COR,sd=sqrt((1-COR^2)/(n-3)),p=c(.025,.975))
-  pt(tstat,df=n-3,lower.tail=F)*2
+ CI.NORM= qnorm(mean=COR,sd=sqrt((1-COR^2)/(n-3)),p=c(.025,.975))
   
  # CI based on Fisher's z-transform
   Z= 0.5*log((1+COR)/(1-COR))
