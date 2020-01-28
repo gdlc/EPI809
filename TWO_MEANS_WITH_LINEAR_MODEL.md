@@ -25,7 +25,7 @@ Y=read.table('~/Dropbox/809/datasets/wages.txt',header=T)
  D=mF-mM
  
 # Variance of the sample mean and of the difference
- vM=var(yM)/nM # variance of the sample mean (eq. 6.2, pp 168)
+ vM=var(yM)/nM # variance of the sample mean (eq. 5.9, pp 168)
  vF=var(yF)/nF # same as above
  vDiff=vM+vF   # because male and female are independent, the variance of the difference
  			   # is the sum of the variances.
