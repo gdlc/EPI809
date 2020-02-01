@@ -41,7 +41,7 @@ The first module will take the first half of the course and will be the focus of
     - [Multiple Linear Regression]()
     
   - **R-scripts**
-    - [Correlation](https://github.com/gdlc/EPI809/blob/master/CORRLEATION.md)
+    - [Correlation](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
     - [Simple linear regression & ANOVA](https://github.com/gdlc/EPI809/blob/master/ANOVA.md)
     - [Diagnosis](https://github.com/gdlc/EPI809/blob/master/DIAGNOSIS.md)
     - [Comparing two means with a linear model](https://github.com/gdlc/EPI809/blob/master/TWO_MEANS_WITH_LINEAR_MODEL.md)
