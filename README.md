@@ -34,4 +34,16 @@ The first module will take the first half of the course and will be the focus of
   - **Datasets:** [Gout](https://github.com/gdlc/EPI809/blob/master/gout.txt) | [Wages](https://github.com/gdlc/EPI809/blob/master/wages.txt).
   - **[In-class assigments](https://github.com/gdlc/EPI809/blob/master/INCLASS.md)**
   - **[Homework](https://github.com/gdlc/EPI809/blob/master/HW.md)**
-  - **Covariance & Correlation:** [examples](https://github.com/gdlc/EPI809/blob/master/CORRLEATION.md)
+  - **Slides:** 
+    - [Covariance & Correlation](https://github.com/gdlc/EPI809/blob/master/1_CORRELATION.pdf)
+    - [Simple Linear Regression](https://github.com/gdlc/EPI809/blob/master/2_SIMPLE_LINEAR_REGRESSION.pdf)
+    - [Dummy variables in linear regression](https://github.com/gdlc/EPI809/blob/master/3_DUMMY_VARIABLES_IN_LINEAR_REGRESSION.pdf)
+    - [Multiple Linear Regression]()
+    
+  - **R-scripts**
+    - [Correlation](https://github.com/gdlc/EPI809/blob/master/CORRLEATION.md)
+    - [Simple linear regression & ANOVA](https://github.com/gdlc/EPI809/blob/master/ANOVA.md)
+    - [Diagnosis](https://github.com/gdlc/EPI809/blob/master/DIAGNOSIS.md)
+    - [Comparing two means with a linear model](https://github.com/gdlc/EPI809/blob/master/TWO_MEANS_WITH_LINEAR_MODEL.md)
+    - [Multiple Linear Regression]()
+        
