@@ -3,8 +3,7 @@
 **Example 1:** Fitting models for factors with multiple levels.
 
 The following example presents a regression of wage on ethnicity, this factor has 3 levels (Black, Hispanic, and White). 
-
-Because each subject falls in one of the three groups, if we create three dummy variables (B/H/W), the sum  of the three dummies is always equal to 1. These three variables are colinear. Thus, we cannot fit a model with an intercept and three dummies. There are two standard parameterizations used for these models: (a) The means model uses one dummy per group without including an intercept. (b) The dummy coding fits a model with an intercept plus q-1 dummies, where q is the number of levels of the factor. The two models are statistically equivalent; however the interpretation of the parameters differ.
+If we create three dummy variables (B/H/W), the sum  of the three dummies is always equal to 1–these three variables are colinear. Thus, we cannot fit a model with an intercept and three dummies. There are two standard parameterizations used for these models: (a) The means model uses one dummy per group without including an intercept. (b) The dummy coding fits a model with an intercept plus q-1 dummies, where q is the number of levels of the factor. The two models are statistically equivalent; however the interpretation of the parameters differ.
 
 ```r
  DATA=read.table('~/Desktop/wages2.txt',header=T)
