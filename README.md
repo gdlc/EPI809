@@ -38,7 +38,7 @@ The first module will take the first half of the course and will be the focus of
     - [Covariance & Correlation](https://github.com/gdlc/EPI809/blob/master/1_CORRELATION.pdf)
     - [Simple Linear Regression](https://github.com/gdlc/EPI809/blob/master/2_SIMPLE_LINEAR_REGRESSION.pdf)
     - [Dummy variables in linear regression](https://github.com/gdlc/EPI809/blob/master/3_DUMMY_VARIABLES_IN_LINEAR_REGRESSION.pdf)
-    - [Multiple Linear Regression]()
+    - [Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/4_MULTIPLE_LINEAR_REGRESSION.pdf)
     
   - **R-scripts**
     - [Correlation](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
