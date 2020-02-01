@@ -38,6 +38,18 @@ If we create three dummy variables (B/H/W), the sum  of the three dummies is alw
 
 Challenge: recover the mean of each group from the parameter estimates of `fm2`
 
+**How does lm construct the contrasts (dummy variables in this case)?**
+
+The `model.matrix` function create the incidence matrix used by `lm`.
+
+```r
+  W=model.matrix(~ethnicity,data=DATA)
+  head(W)
+  
+  W=model.matrix(~ethnicity-1,data=DATA)
+  head(W)
+```
+Once the incidence matrix is crated, the columns of `W` are treated as quantitative variables.
 
 **Example 2:** A model with factors (i.e., discrete predictors) and covariates (i.e., quantitative predictors.
 
