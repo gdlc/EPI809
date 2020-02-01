@@ -45,5 +45,5 @@ The first module will take the first half of the course and will be the focus of
     - [Simple linear regression & ANOVA](https://github.com/gdlc/EPI809/blob/master/ANOVA.md)
     - [Diagnosis](https://github.com/gdlc/EPI809/blob/master/DIAGNOSIS.md)
     - [Comparing two means with a linear model](https://github.com/gdlc/EPI809/blob/master/TWO_MEANS_WITH_LINEAR_MODEL.md)
-    - [Multiple Linear Regression]()
+    - [Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/MULTIPLE_LINEAR_REGRESSION.md)
         
