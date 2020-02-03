@@ -16,7 +16,7 @@ If we create three dummy variables (B/H/W), the sum  of the three dummies is alw
  
  ## Means model: three dummies, no intercept
  fm1=lm(wage~B+H+W-1) #'-1' tells lm to exclude the intercept
- fm1=lm(Wage~B+H+W-1,data=DATA) #'-1' tells lm to exclude the intercept
+ fm2=lm(Wage~ethnicity,data=DATA) #'-1' tells lm to exclude the intercept
  summary(fm1)
  
  # In the 'means model' parameter estimates are just the means of the group 
