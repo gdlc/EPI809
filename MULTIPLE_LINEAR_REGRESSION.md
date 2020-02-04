@@ -8,6 +8,8 @@ If we create three dummy variables (B/H/W), the sum  of the three dummies is alw
 ```r
  DATA=read.table('~/Desktop/wages2.txt',header=T)
  
+ attach(DATA) # attachs the variables to the environment...
+ 
  ## Creating the dummy variables
  B=ifelse(DATA$ethnicity=='B',1,0)
  H=ifelse(DATA$ethnicity=='H',1,0)
@@ -15,25 +17,26 @@ If we create three dummy variables (B/H/W), the sum  of the three dummies is alw
  
  
  ## Means model: three dummies, no intercept
- fm1=lm(wage~B+H+W-1) #'-1' tells lm to exclude the intercept
- fm2=lm(wage~B+H,data=DATA) #'-1' tells lm to exclude the intercept
+ fm1=lm(Wage~B+H+W-1) #'-1' tells lm to exclude the intercept
+ fm2=lm(Wage~ethnicity-1,data=DATA) #'-1' tells lm to exclude the intercept
  summary(fm1)
+ summary(fm2)
+ 
  
  # In the 'means model' parameter estimates are just the means of the group 
  # (if we had covariates these would be group-specific intercepts)
- mean(DATA$Wage[B==1])
- mean(DATA$Wage[H==1])
- mean(DATA$Wage[W==1])
+ mean(Wage[B==1])
+ mean(Wage[H==1])
+ mean(Wage[W==1])
  
  
  ## Dummy coding: intercept + two dummy variables
- fm2=lm(Wage~ethnicity,data=DATA)
+ fm3=lm(Wage~ethnicity,data=DATA)
 
  # fm1 and fm2 are just two parameterization of the same model:
- plot(predict(fm1),predict(fm2))
- plot(residuals(fm1),residuals(fm2))
- anova(fm1)
- anova(fm2)
+ plot(predict(fm1),predict(fm3))
+ plot(residuals(fm1),residuals(fm3))
+
 ```
 
 Challenge: recover the mean of each group from the parameter estimates of `fm2`
@@ -43,10 +46,10 @@ Challenge: recover the mean of each group from the parameter estimates of `fm2`
 The `model.matrix` function create the incidence matrix used by `lm`.
 
 ```r
-  W=model.matrix(~ethnicity,data=DATA)
+  W=model.matrix(~ethnicity)
   head(W)
   
-  W=model.matrix(~ethnicity-1,data=DATA)
+  W=model.matrix(~ethnicity-1)
   head(W)
 ```
 Once the incidence matrix is crated, the columns of `W` are treated as quantitative variables.
@@ -54,22 +57,18 @@ Once the incidence matrix is crated, the columns of `W` are treated as quantitat
 **Example 2:** A model with factors (i.e., discrete predictors) and covariates (i.e., quantitative predictors.
 
 ```r
- fm3=lm(Wage~ethnicity+Education,data=DATA)
- summary(fm3)
+ fm4=lm(Wage~ethnicity+Education,data=DATA)
+ summary(fm4)
  
 ```
 **Example 3:** ANOVA in the Multiple Linear Regression
 
 ```r
 
- anova(fm3)
+ anova(fm4)
  
- anova(fm2,fm3)
+ anova(fm3,fm4)
  
- fm3b=m(Wage~Education+ethnicity,data=DATA)
- 
- summary(fm3b)
- anova(fm2,fm3b)
 
 ```
 
