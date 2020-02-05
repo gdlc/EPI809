@@ -68,7 +68,7 @@ sum(eHat2^2)-sum(eHat3^2)
 
 ```
 
-What happen if we change the order we enter variables in the model?
+What happens if we change the order we enter variables in the model?
 
 ```r
 fm=lm(Wage~Education+sex+ethnicity,data=Y)
