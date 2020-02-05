@@ -61,14 +61,4 @@ Once the incidence matrix is crated, the columns of `W` are treated as quantitat
  summary(fm4)
  
 ```
-**Example 3:** ANOVA in the Multiple Linear Regression
-
-```r
-
- anova(fm4)
- 
- anova(fm3,fm4)
- 
-
-```
 
