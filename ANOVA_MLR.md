@@ -89,7 +89,7 @@ anova(fm2)
 
 ### Type-III SS 
 
-The ANOVA with sequential SS is not invariant with respect to the order in which we entered predictors in the model. To test the significance of each factor, we may want to do it bu enetering each factor last in the model. This is called the type-III SS.
+The ANOVA with sequential SS is not invariant with respect to the order in which we entered predictors in the model. To test the significance of each factor, we may want to do it by enetering each factor last in the model. This is called the type-III SS. When we do this we test whether a particular factor has an effect, after considering all the other factors in the model. The "short" regression or null hypothesis is a model that excludes one factor and the "long" regression is the model that includes all the predictors we are considering.
 
 ```r
 #install.packages(pkg='car',repos='https://cran.r-project.org/')
