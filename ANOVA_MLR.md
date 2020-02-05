@@ -80,6 +80,8 @@ anova(fm)
  fm3=lm(eHat2~Education+sex+ethnicity,data=Y)
  eHat3=residuals(fm3)
  sum(eHat2^2)-sum(eHat3^2)
+ 
+ sum(eHat3^2) # final RSS
 
 ```
 
