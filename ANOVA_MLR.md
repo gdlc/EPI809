@@ -4,10 +4,10 @@ This entry shows how to perform Analysis of Variance in the Multiple Linear Regr
 **The `anova` function applied to multiple-linear regression models**
 
 ```r
-Y=read.table(file='~/Desktop/wages2.txt',header=T)
-fm=lm(Wage~Education+South+Married+Experience+Union+sex+ethnicity,data=Y)
+Y=read.table(file='~/Dropbox/809/datasets/wages2.txt',header=T)
+fm=lm(Wage~Education+Region+Married+Experience+Union+sex+ethnicity,data=Y)
 summary(fm)
-anova(fm)
+
 ```
 
 Total and residual sum of squares 7 testing the model.
@@ -19,24 +19,32 @@ Total and residual sum of squares 7 testing the model.
  # Reproducing the anova table
  y=Y$Wage
  yHat=predict(fm)
- eHat=residuals(fm)
- DF.M=(1+1+1+1)+(1+1)+2 #south, married, union and sex has 2 levels, thus 1df each. 
-                  # Education and Experience are covariates, 1 df each
-                  # Ethnicity has 3 levels, thus 2 df. 
+ eHatHa=residuals(fm)
+ eHatH0=residuals(fm0)
+ n=length(yHat) # discuss what happens when there are NAs
+ 
+ # Sum of Squares
+ resSSH0=sum(eHatH0^2) # total SS  
+ resSSHa=sum(eHatHa^2) # residual SS
+ SSm=resSSH0-resSSHa   # model SS
 
-  SSy=sum((y-mean(y))^2) # total SS
-  RSS=sum(eHat^2) # residual SS
-  SSm=SSy-RSS # model SS
-  DF.RES=nrow(Y)-DF-1
-  FStat=(SSm/DF.M)/(RSS/DF.RES)
-  PVal=pf(q=FStat,df1=DF.M,df2=DF.RES,lower.tail=F)
+ # Degree of freedom
+  resDFH0=n-length(coef(fm0))
+  resDFHa=n-length(coef(fm))
+  modelDF=resDFH0-resDFHa
+
+ # F-statistic and p-value
+  FStat=(SSm/modelDF)/(resSSHa/resDFHa)
+  PVal=pf(q=FStat,df1=modelDF,df2=resDFHa,lower.tail=F)
   
   SSm
   RSS
-  M.DF
-  DF.RES
+  modelDF
+  resDFHa
   FStat
   PVal
+  
+  anova(fm0,fm)
   
 ```
 
