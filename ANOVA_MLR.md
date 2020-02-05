@@ -110,3 +110,25 @@ Anova(fm,type='III') # SS when each factor is entered last
  sum(residual(fm)^2)
 
 ```
+
+
+## Short Vs Long Regression
+
+This code implements in R the tests implemented in the slides [testing in the linear regression](https://github.com/gdlc/EPI809/blob/master/5_TESTING_IN_MLR.pdf).
+```r
+
+Y=read.table('~/Desktop/wages2.txt',header=T)
+head(Y)
+Y$Region=factor(Y$Region,levels=c('North','South'))
+Y$Region=factor(Y$Region,levels=c('North','South'))
+fm=lm(Wage~Region+sex+Experience+Education,data=Y)
+fm=lm(Wage~1)
+fm=lm(Wage~Region+sex+Experience+Education,data=Y)
+fm0=lm(Wage~1)
+fmL=lm(Wage~Region+sex+Experience+Education,data=Y)
+fmS=lm(Wage~Region+sex,data=Y)
+anova(fmL)
+anova(fmS)
+anova(fmS,fmL)
+
+```
