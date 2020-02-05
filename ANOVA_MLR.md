@@ -79,4 +79,34 @@ anova(fm)
 anova(fm2)
 ```
 
-### Type-II SS 
+### Type-III SS 
+
+The ANOVA with sequential SS is not ivariant with respect to the order in which we entered predictors in the model. To test the significance of each factor, we may want to do it bu enetering each factor last in the model. This is called the type-III SS.
+
+```r
+
+library(car)
+anova(fm) # produces sequential ANOVA
+Anova(fm,type='III') # SS when each factor is entered last
+
+# Let's verify
+
+# Education
+ fm=lm(Wage~Education+sex+ethnicity,data=Y)
+ fm0=lm(Wage~sex+ethnicity,data=Y)
+ sum(residuals(fm0)^2)-sum(residuals(fm)^2)
+ 
+# sex
+ fm=lm(Wage~Education+sex+ethnicity,data=Y)
+ fm0=lm(Wage~Education+ethnicity,data=Y)
+ sum(residuals(fm0)^2)-sum(residuals(fm)^2)
+ 
+# Ethnicity
+ fm=lm(Wage~Education+sex+ethnicity,data=Y)
+ fm0=lm(Wage~Education+sex,data=Y)
+ sum(residuals(fm0)^2)-sum(residuals(fm)^2)
+
+# RSS
+ sum(residual(fm)^2)
+
+```
