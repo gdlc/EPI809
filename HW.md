@@ -63,7 +63,7 @@ Summarize your findings.
 
 2.2.	Regress urate (or log-urate if you decided to use the transformation) on sex, race and age using a multiple regression model, and conduct an F test to test with at least one of the factors/covariates included in the model have an effect on the response. Summarize your conclusions.
 
-2.3.	If you find that at least one factor/covariate had a non-null effect, test individual factors and summarize your findings (hint: for 1-df test you can use the t-test, which will yield results equivalent to the 1-DF F-test).
+2.3.	If you find that at least one factor/covariate had a non-null effect, test individual factors and summarize your findings (hint: for 1-df test you can use the t-test, which yields results equivalent to the 1-DF F-test).
 
 **3.	Testing long and short regression**
 
