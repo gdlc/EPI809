@@ -38,3 +38,47 @@ Using the data provided in Table  11.1 (p 459), reproduce the results of Figure 
   **3.2.** Using the fitted model report an ANOVA Table (Hint: apply the `anova()` function to the model fitted to obtain your answer in 3.1). Your results should match those in Table 11.3 of the textbook.
   
   **3.3.** Using R reproduce the plot of Figure 11.1
+  
+  
+  
+## HW2: Multiple Linear Regression
+
+Due Feb 14th in D2L
+
+In the HW you will use the [gout](https://github.com/gdlc/EPI809/blob/master/gout.txt) data set available in our github repository. 
+
+
+**1.  Preliminary, descriptive analysis**
+
+Present:
+- A histogram of serum urate and one of log-serum urate. 
+- Boxplots of log-urate versus sex and race.
+- Scatter plot of log-urate versus age.
+
+Summarize your findings. 
+
+**2.	Regression analysis**
+
+2.1.	The goal is to study the effect of sex, race and age on serum urate. Would you recommend using serum urate or log-urate as response? Justify
+
+2.2.	Regress urate (or log-urate if you decided to use the transformation) on sex, race and age using a multiple regression model, and conduct an F test to evaluate whether some of the factors/covariates have an effect on the response. Summarize your conclusions.
+
+2.3.	If you find that at least one factor/covariate had a non-null effect, test individual factors and summarize your findings (hint: for 1-df test you can use the t-test, which will yield results equivalent to the 1-DF F-test).
+
+**3.	Testing long and short regression**
+
+A researcher wants to test whether race and sex have an effect after accounting for differences in the response (either urate or log-urate) attributable to age.
+
+3.1.	Describe the null and alternative hypothesis involved
+3.2.	Implement the test
+3.3.	Summarize your results
+
+**4.	Diagnostics** 
+
+Present diagnostic analysis for the long regression y~sex+race+age, where y is either serum urate or log-urate. Summarize your findings.
+
+**5.	Consider expanding the long regression of 2-4 to model sex-by-race interactions, sex-by-age and race-by-age interactions.** 
+
+5.1.	Present the null and alternative hypotheses that you plan to use to test the above interactions.
+5.2.	Implement the test and present your results
+5.3.	Summarize your findings
