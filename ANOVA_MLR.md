@@ -89,7 +89,7 @@ anova(fm2)
 
 ### Type-III SS 
 
-The ANOVA with sequential SS is not ivariant with respect to the order in which we entered predictors in the model. To test the significance of each factor, we may want to do it bu enetering each factor last in the model. This is called the type-III SS.
+The ANOVA with sequential SS is not invariant with respect to the order in which we entered predictors in the model. To test the significance of each factor, we may want to do it bu enetering each factor last in the model. This is called the type-III SS.
 
 ```r
 #install.packages(pkg='car',repos='https://cran.r-project.org/')
