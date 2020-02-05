@@ -16,7 +16,7 @@ Total and residual sum of squares 7 testing the model.
  fm0=lm(Wage~1,data=Y)
  anova(fm0,fm)
  
- # Reproducing the anova table
+ # Reproducing the ANOVA table
  y=Y$Wage
  yHat=predict(fm)
  eHatHa=residuals(fm)
@@ -50,29 +50,36 @@ Total and residual sum of squares 7 testing the model.
 
 **Sequential ANOVA**
 
-When we apply the `anova` function to a fitted model we obtain a decomposition of the variance for each factor. 
-By default, R performs sequential ANOVA. 
+When we apply the `anova` function to a fitted model we obtain a decomposition of the variance for each factor. By default, R performs sequential ANOVA. Sequential (or type-I) ANOVA is not invariant to the order in which predictors enter in the model. The following example reproduces the sequential ANOVA produce by `anova()` using sequential regressions. 
 
 ```r
+rm(list=ls()) # cleans the environment
+Y=read.table(file='~/Dropbox/809/datasets/wages2.txt',header=T)
 
 fm0=lm(Wage~1,data=Y)
 fm=lm(Wage~Education+sex+ethnicity,data=Y)
 anova(fm0,fm)
 
 anova(fm)
-eHat0=residuals(fm0)
 
-fm1=lm(eHat0~Education,data=Y)
-eHat1=residuals(fm1)
-sum(eHat0^2)-sum(eHat1^2)
+## Sequential anova
+ # Null hypothesis
+ eHat0=residuals(fm0) # Intercept only
 
-fm2=lm(eHat1~sex,data=Y)
-eHat2=residuals(fm2)
-sum(eHat1^2)-sum(eHat2^2)
+ # Add education
+ fm1=lm(eHat0~Education,data=Y) # Intercept plus education
+ eHat1=residuals(fm1)
+ sum(eHat0^2)-sum(eHat1^2) # variance explained by education
 
-fm3=lm(eHat2~ethnicity,data=Y)
-eHat3=residuals(fm3)
-sum(eHat2^2)-sum(eHat3^2)
+ # Add sex
+ fm2=lm(Wage~Education+sex,data=Y) # Intercept+Education + sec
+ eHat2=residuals(fm2)
+ sum(eHat1^2)-sum(eHat2^2) # variance explained by sex that was not 
+                           # explained by education.
+ # Add ethnicity
+ fm3=lm(eHat2~Education+sex+ethnicity,data=Y)
+ eHat3=residuals(fm3)
+ sum(eHat2^2)-sum(eHat3^2)
 
 ```
 
@@ -89,7 +96,7 @@ anova(fm2)
 
 ### Type-III SS 
 
-The ANOVA with sequential SS is not invariant with respect to the order in which we entered predictors in the model. To test the significance of each factor, we may want to do it by enetering each factor last in the model. This is called the type-III SS. When we do this we test whether a particular factor has an effect, after considering all the other factors in the model. The "short" regression or null hypothesis is a model that excludes one factor and the "long" regression is the model that includes all the predictors we are considering.
+The ANOVA with sequential SS is not invariant with respect to the order in which we entered predictors in the model. To test the significance of each factor, we may want to do it by enetering each factor last in the model. This is called the type-III SS. When we do this, we test whether a particular factor has an effect, after considering all the other factors in the model. The "short" regression or null hypothesis is a model that excludes one factor and the "long" regression is the model that includes all the predictors we are considering.
 
 ```r
 #install.packages(pkg='car',repos='https://cran.r-project.org/')
