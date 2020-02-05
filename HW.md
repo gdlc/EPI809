@@ -67,15 +67,16 @@ Summarize your findings.
 
 **3.	Testing long and short regression**
 
-A researcher wants to test whether race and sex have an effect after accounting for differences in the response (either urate or log-urate) attributable to age.
+A researcher wants to test whether either race, sex, or both have an effect on urate after accounting for differences attributable to age.
 
 3.1.	Describe the null and alternative hypothesis involved
-3.2.	Implement the test
-3.3.	Summarize your results
+3.2.  What are the model, residual, and total df of the test? Explain.
+3.3.	Implement the test
+3.4.	Summarize your results
 
 **4.	Diagnostics** 
 
-Present diagnostic analysis for the long regression y~sex+race+age, where y is either serum urate or log-urate. Summarize your findings.
+Present diagnostic analysis for the long regression `y~sex+race+age`, where y is either serum urate or log-urate. Summarize your findings.
 
 **5.	Consider expanding the long regression of 2-4 to model sex-by-race interactions, sex-by-age and race-by-age interactions.** 
 
