@@ -39,7 +39,8 @@ The first module will take the first half of the course and will be the focus of
     - [Simple Linear Regression](https://github.com/gdlc/EPI809/blob/master/2_SIMPLE_LINEAR_REGRESSION.pdf)
     - [Dummy variables in linear regression](https://github.com/gdlc/EPI809/blob/master/3_DUMMY_VARIABLES_IN_LINEAR_REGRESSION.pdf)
     - [Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/4_MULTIPLE_LINEAR_REGRESSION.pdf)
-    - [ANOVA & Testing in the MLR model](https://github.com/gdlc/EPI809/blob/master/5_ANOVA_AND_TESTING_IN_MLR.pdf)    
+    - [ANOVA & Testing in the MLR model](https://github.com/gdlc/EPI809/blob/master/5_ANOVA_AND_TESTING_IN_MLR.pdf)
+    - [F-test, t-test & Multiple-testing](https://github.com/gdlc/EPI809/blob/master/6_TESTING_IN_MLR_II.pdf)
     
   - **R-scripts**
     - [Correlation](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
@@ -48,4 +49,5 @@ The first module will take the first half of the course and will be the focus of
     - [Comparing two means with a linear model](https://github.com/gdlc/EPI809/blob/master/TWO_MEANS_WITH_LINEAR_MODEL.md)
     - [Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/MULTIPLE_LINEAR_REGRESSION.md)
     - [ANOVA in Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/ANOVA_MLR.md)
+    - [Post-hoc., Duncan and Tukey's HSD](https://github.com/gdlc/EPI809/blob/master/POST_HOC.md)
         
