@@ -50,5 +50,5 @@ The first module will take the first half of the course and will be the focus of
     - [Comparing two means with a linear model](https://github.com/gdlc/EPI809/blob/master/TWO_MEANS_WITH_LINEAR_MODEL.md)
     - [Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/MULTIPLE_LINEAR_REGRESSION.md)
     - [ANOVA in Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/ANOVA_MLR.md)
-    - [Post-hoc., Duncan and Tukey's HSD](https://github.com/gdlc/EPI809/blob/master/POST_HOC.md)
+    - [Post-hoc., Tukey's HSD](https://github.com/gdlc/EPI809/blob/master/POST_HOC.md)
         
