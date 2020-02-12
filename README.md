@@ -41,6 +41,7 @@ The first module will take the first half of the course and will be the focus of
     - [Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/4_MULTIPLE_LINEAR_REGRESSION.pdf)
     - [ANOVA & Testing in the MLR model](https://github.com/gdlc/EPI809/blob/master/5_ANOVA_AND_TESTING_IN_MLR.pdf)
     - [F-test, t-test & Multiple-testing](https://github.com/gdlc/EPI809/blob/master/6_TESTING_IN_MLR_II.pdf)
+    - [Interactions (Factor-by-Factor, Factor-by-Covariate)](https://github.com/gdlc/EPI809/blob/master/7_INTERACTIONS.pdf)
     
   - **R-scripts**
     - [Correlation](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
