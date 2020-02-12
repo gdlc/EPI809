@@ -51,4 +51,5 @@ The first module will take the first half of the course and will be the focus of
     - [Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/MULTIPLE_LINEAR_REGRESSION.md)
     - [ANOVA in Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/ANOVA_MLR.md)
     - [Post-hoc., Tukey's HSD](https://github.com/gdlc/EPI809/blob/master/POST_HOC.md)
+    - [Interactions](https://github.com/gdlc/EPI809/blob/master/INTERACTIONS.md)
         
