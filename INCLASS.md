@@ -88,3 +88,10 @@ summary(fm)
 ```
 
 There is a modertaly high correlation between child's height and mid-parental height (~0.46) and this correlation is statistically different than zero at a singnificance level of 0.01. On average we expect an increase in 0.65 inches in child's height per additional inch in midparental height.
+
+### [In-class 4](https://www.dropbox.com/s/wfnnwxgmijcgun1/INCLASS_4.docx?dl=0)
+
+### [In-class 5](https://www.dropbox.com/s/wfnnwxgmijcgun1/INCLASS_5.docx?dl=0)
+
+### [In-class 6](https://www.dropbox.com/s/wfnnwxgmijcgun1/INCLASS_6.docx?dl=0)
+
