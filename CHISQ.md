@@ -54,3 +54,5 @@ Finally, we compute the p-value
 ```r
  pchisq(q=CHISQ,df=1,lower.tail=F)
 ```
+
+[Back](https://github.com/gdlc/EPI809/blob/master/README.md)
