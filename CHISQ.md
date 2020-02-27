@@ -31,7 +31,7 @@ Now we compute the expected frecuencies under independence
  EF[2,2]=mBC[2]*mAge[2]
 ```
 
-And with this the expected counts
+And with this, we compute the expected counts
 
 ```r
  EC=EF*N
