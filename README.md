@@ -53,3 +53,8 @@ The first module will take the first half of the course and will be the focus of
     - [Post-hoc., Tukey's HSD](https://github.com/gdlc/EPI809/blob/master/POST_HOC.md)
     - [Interactions](https://github.com/gdlc/EPI809/blob/master/INTERACTIONS.md)
     - [Chi-square test](https://github.com/gdlc/EPI809/blob/master/CHISQ.md)
+
+### Module 2
+
+  - **R-scripts**
+    - [Relative risk & Odds ratio](https://github.com/gdlc/EPI809/blob/master/MYOCARDIAL_INFRACTION_OC.md)
