@@ -26,12 +26,6 @@ The first module will take the first half of the course and will be the focus of
 | Joseph Gardiner  | 909 Wilson Road  Room B601 |  (517) 353-8623  |gardine3@msu.edu   | TBA |
 | Ana I. Vazquez  | 909 Wilson Rd, Room 627B|  (517) 353-8623 | avazquez@msu.edu | M/W 2-4 pm |
 
-<div id="sideMenu"> 
-	[TOC] 
-</div> 
-<div id="mainContent"> 
-	[CONTENT] 
-</div>
 
 ## Content
 
