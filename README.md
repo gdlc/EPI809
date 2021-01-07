@@ -1,5 +1,7 @@
 ## EPI809 (Biostatistics II)
 
+# Hola Daniel
+
 **Textbook**: Rosner, B. Fundamentals of Biostatistics, 8th Edition, Duxbury. (same textbook as the one used in EPI 808).
 
 **Prerequisites**:	EPI 808, EPI 851, or equivalent.
