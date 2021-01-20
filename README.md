@@ -4,7 +4,7 @@
 
 **Prerequisites**:	EPI 808, EPI 851, or equivalent.
 
-**[Syllabus](https://github.com/gdlc/EPI809/blob/master/EPI_809_SPRING_2020-syllabus.pdf)**
+**Syllabus**: See D2L
 
 **Course objective**s: (i) statistical analysis of quantitative variables, including correlation, simple and multiple linear regression, analysis of variance and hypothesis testing in the linear model (t-test and F-test) and (ii) categorical data analysis, including hypothesis testing of proportions, analysis of contingency tables, and logistic regression. 
 
