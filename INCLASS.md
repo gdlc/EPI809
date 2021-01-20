@@ -5,7 +5,7 @@
 
 ### In-class 1
 
-Enter the following data into excel or R
+Enter the following data into excel
 
 
 | ID | X | Y |
@@ -21,10 +21,16 @@ Enter the following data into excel or R
 | 9	| 4.87	| 5.39 |
 | 10 | 4.59 |	5.08 |
 
-Produce a excel file or an R-script that computes the mean and variance of each variable and the covariance between the two.
+ - Produce a excel file  that computes the mean and variance of each variable and the covariance between the two. Use these statistics to compute the correlation coefficient. Do not use any function other than sum and average.
 
-Use only sums, differences, products and power functions (i.e., do not use the excel functions `average()`, `correl()`, etc. or the R-functions `mean()`, `var()`, `cov()` )
+Hints: To compute variance and covariance, after computing the mean of X and Y (mX and mY, respectively), compute in new columns, for each observation in th data set, the deviation from the means ( xi-mX  and yi-mY), the product of the x- and y-deviation from the means (xi-mX)(yi-mY), and the sqaured deviations (xi-mX)(yi-mX), use the sums of these mean-deviations and cross-products, and the formulas available in the slides to compute the covariance between X and Y and the correlation coefficient.
 
+  - Verify your results using the built-in formulas of Excel (average, var, covar, correl)
+  
+  - Replicate your code in R, you can load the data in R using the script provided below. Repeat the process above described, that is, compute the correlation without using the `var()`, `cov()`, and `cor()`, then verify your results using those functions.
+  
+  - Compare the R and Excel results.
+  
 Turn your assigment into D2L
 
 **Proposed solution**
