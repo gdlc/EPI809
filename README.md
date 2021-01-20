@@ -29,6 +29,7 @@ The first module will take the first half of the course and will be the focus of
 ## Content
 
 [R-Intro](https://github.com/gdlc/STAT_COMP/blob/master/RIntro.md)
+
 [RMarkdown template](https://github.com/gdlc/STAT_COMP/blob/master/RMarkdown_for_beginners.Rmd)
 
 ### Module 1
