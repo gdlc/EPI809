@@ -28,7 +28,11 @@ Hints: To compute variance and covariance, after computing the mean of X and Y (
   - Verify your results using the built-in formulas of Excel (average, var, covar, correl)
   
   - Replicate your code in R, you can load the data in R using the script provided below. Repeat the process above described, that is, compute the correlation without using the `var()`, `cov()`, and `cor()`, then verify your results using those functions.
-  
+
+```r
+ X=c(4.55,4.95, 4.64, 4.97, 4, 4.47, 4.87, 4.38, 4.87, 4.59)
+ Y=c(	4.99, 5.65,	5.5,	5.1,	4.51,	5.13,	5.27,	4.53,	5.39, 5.08)
+```
   - Compare the R and Excel results.
   
 Turn your assigment into D2L
@@ -36,7 +40,7 @@ Turn your assigment into D2L
 **Proposed solution**
 
 ```r
-
+  
 ```
 
 ### In-class 2
