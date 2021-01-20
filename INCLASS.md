@@ -30,18 +30,6 @@ Turn your assigment into D2L
 **Proposed solution**
 
 ```r
-X=c(4.55, 4.95, 4.64, 4.97, 4, 4.47, 4.87, 4.38, 4.87, 4.59)
-
-Y=c(4.99, 5.65, 5.5, 5.1, 4.51, 5.13, 5.27, 4.53, 5.39, 5.08)
-
-mX=mean(X)
-mY=mean(Y)
-dX=X-mX
-dY=Y-mY
-dXdY=dX*dY
-sum(dXdY)/(length(X)-1)
-
-cov(X,Y)
 
 ```
 
@@ -71,20 +59,8 @@ Using Galton's data set compute and report:
   
  **Proposed Solution**
  
- ```r
- DATA=read.table('~/Desktop/GALTON.txt',header=T)
-X=DATA$Midparent
-Y=DATA$Child
+```r
 
-## 1st let's compute the OLS coefficients using the formulas discussed in class
-
-b1Hat=cov(X,Y)/var(X)
-b0Hat=mean(Y)-mean(X)*b1Hat
-
-# Now with lm(Y~X), it fits a regression Y=b0+b1*X+E, by least squares
-
-fm=lm(Y~X)
-summary(fm)
 ```
 
 There is a modertaly high correlation between child's height and mid-parental height (~0.46) and this correlation is statistically different than zero at a singnificance level of 0.01. On average we expect an increase in 0.65 inches in child's height per additional inch in midparental height.
