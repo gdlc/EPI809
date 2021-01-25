@@ -57,7 +57,7 @@ The first module will take the first half of the course and will be the focus of
     - [Interactions](https://github.com/gdlc/EPI809/blob/master/INTERACTIONS.md)
     - [Chi-square test](https://github.com/gdlc/EPI809/blob/master/CHISQ.md)
     
-   - **[Other scripts](https://github.com/gdlc/EPI809/edit/master/SCIPTS.md)**
+   - **[Other scripts](https://github.com/gdlc/EPI809/edit/master/SCRIPTS.md)**
 
 ### Module 2
 
