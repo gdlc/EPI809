@@ -55,8 +55,9 @@ Using the following data:
  cor(x,y)
 ```
 
-1) Use `cor.test` to compute the p-value for H0: r=0 Vs Ha: r>=0
-2) Compute the same p-value using `pt` (Hint: see code available in Github, in [CORRELATION.md](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
+1) Use `cor.test` to obtain an estimate, SE, CI and a p-value for H0: r=0 Vs Ha: r>=0
+2) Obtain the same results assuming that the correlation coefficient follows a normal distribution.
+3) Obtain the same results using Fisher's Z-transform.
 
 
 ### In-class 3
