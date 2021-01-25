@@ -11,7 +11,7 @@
 | Mon., Feb. 15, 2021	   | 	8	|	|Multiple-linear regression (1 dummy, 1 covariate)	|HW2-posted|
 | Wed., Feb. 17, 2021   | 	9	|12.6	|Multilevel factors: coding, parameter interpretation	| |
 | Mon., Feb. 22, 2021	   | 	10	| | Inference in the MLR (F-test and t-test)|	  |
-| Wed., Feb. 24, 2021  | 	11	|	Interactions: dummy-by-dummy, dummy-by-covariate, polyomials | |	
+| Wed., Feb. 24, 2021  | 	11	|	 |Interactions: dummy-by-dummy, dummy-by-covariate, polyomials |	|
 | Mon., March 1, 2021	   | 12	|12.9-12.10	| Overview of testing and model selection | |	
 | Wed., March 3, 2021	   | | no-class	|  | |	
 | Mon., March 8, 2021  | 	13	|	| | Midterm |	
