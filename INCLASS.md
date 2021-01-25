@@ -40,7 +40,26 @@ Turn your assigment into D2L
 **Proposed solution**
 
 ```r
-  
+ meanX=mean(X)
+ meanY=mean(Y)
+ 
+ dx=(X-meanX)
+ dy=(Y-meanY)
+ 
+ # Variances
+ n=length(X)
+ var(X)
+ sum(dx^2)/(n-1)
+
+ var(Y)
+ sum(dy^2)/(n-1) 
+ 
+ cov(X,Y)
+ sum(dx*dy)/(n-1)
+ 
+ cov(X,Y)/sqrt(var(X)*var(Y))
+ cor(X,Y)
+
 ```
 
 ### In-class 2
