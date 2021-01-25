@@ -43,3 +43,4 @@ for(i in 1:B){
   sqrt((1-rho^2)/(n-2))
   sd(COR)
 ```
+[Main](https://github.com/gdlc/EPI809)
