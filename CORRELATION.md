@@ -71,15 +71,9 @@
 The following code replicates the output of `cor.test`
 
 ```r
-## Simulating data
-set.seed(195021)
-n=50
-x=runif(n)
-y=x+rnorm(n)
-
 # Correlation coefficient and it's SE
 COR=cor(x,y)
-V=(1-COR^2)/(n-3)
+V=(1-COR^2)/(n-2)
 SE=sqrt(V)
 
 cor.test(x,y)
