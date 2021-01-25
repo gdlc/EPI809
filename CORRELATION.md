@@ -2,7 +2,7 @@
 
 **Reading the data and producing descritptive statistics & plots**
 ```r
- DATA=read.table('~/Dropbox/STATCOMP/2018/wage.txt',header=T)
+ DATA=read.table('~/Dropbox/STATCOMP/2018/wages.txt',header=T)
  dim(DATA)  # returns number of rows and columns
  str(DATA)  # describe the data type and structure
  head(DATA) # shows the first rows
