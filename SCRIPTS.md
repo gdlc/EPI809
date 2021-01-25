@@ -42,6 +42,4 @@ for(i in 1:B){
 ## Is the SE correct?
   sqrt((1-rho^2)/(n-2))
   sd(COR)
-
-
 ```
