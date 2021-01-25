@@ -56,6 +56,8 @@ The first module will take the first half of the course and will be the focus of
     - [Post-hoc., Tukey's HSD](https://github.com/gdlc/EPI809/blob/master/POST_HOC.md)
     - [Interactions](https://github.com/gdlc/EPI809/blob/master/INTERACTIONS.md)
     - [Chi-square test](https://github.com/gdlc/EPI809/blob/master/CHISQ.md)
+    
+   - **[Other scripts](https://github.com/gdlc/EPI809/edit/master/SCIPTS.md)**
 
 ### Module 2
 
