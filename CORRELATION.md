@@ -61,7 +61,7 @@
 
 ```
 
-**Inference**
+**Inference **
 
 ```r
  cor.test(x,y)
@@ -78,18 +78,24 @@ The following code replicates the output of `cor.test`
  cor.test(x,y)
 ```
 
-*Confidence interval assuming normality*
+*Confidence interval and p-values assuming normality*
 
 ```r
  # t-statistics
   tstat=COR/SE 
  
  # CI assuming normality 
-  CI.NORM= qnorm(mean=COR,sd=sqrt((1-COR^2)/(n-2)),p=c(.025,.975))
-  
- # Using the t-distribution
-  CI.T=qt(df=(n-2),p=c(.025,.975))*SE +COR
-  
+  CI.NORM= qnorm(mean=COR,sd=SE,p=c(.025,.975))
+   
+  CI.NORM
+   
+ # P-value
+
+```
+
+*Using Fisher's Z-transform*
+
+```r
  # CI based on Fisher's z-transform
   Z= 0.5*log((1+COR)/(1-COR))
   SE.Z=sqrt(1/(n-3))
@@ -105,3 +111,6 @@ The following code replicates the output of `cor.test`
  CI.R.FISHER=zInv(CI.Z)
  rbind(CI.NORM,CI.T,CI.R.FISHER)	
 ```
+
+
+
