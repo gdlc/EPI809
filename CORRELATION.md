@@ -98,10 +98,9 @@
   # CI for Z
    CI.Z= Z+c(-1,1)*SE.Z*qnorm(.975) # aprox. 1.96
   	
-   zInv=function(z,n){
+   zInv=function(z){
     	r=(exp(2*z)-1)/(1+exp(2*z))
     	return(r)
-    
 	}	
  CI.R.FISHER=zInv(CI.Z)
  rbind(CI.NORM,CI.R.FISHER)	
