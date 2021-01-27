@@ -105,6 +105,37 @@
  CI.R.FISHER=zInv(CI.Z)
  rbind(CI.NORM,CI.R.FISHER)	
 ```
+
+*Reproducing the results of cor.test()*
+
+```r
+ 
+```
+
+### Using heatmaps and hierarichal clustering to explore correlation patterns
+
+**Blood-biomarker data set**
+
+```r
+ Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt',header=TRUE,sep=' ')
+ head(Y)
+ dim(Y)
+ Y=as.matrix(Y[,1:8])
+ 
+ # when x is a matrix, cor() produces correlation matrices
+ COR=cor(x=Y)
+ COR
+ 
+ # heatmap
+  heatmap(COR,symm=TRUE)
+  
+ # just the clustering
+  clust=hclust(dist(t(Y))) # hclust takes a distance matrix as input.
+  plot(clust)
+  
+ 
+
+```
 **Note**: compare the results obtained with Fisher's Z-transform and those from `cor.test(x,y)`.
 
 
