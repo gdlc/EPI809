@@ -61,7 +61,7 @@
 
 ```
 
-**Inference **
+**Inference**
 
 ```r
  cor.test(x,y)
