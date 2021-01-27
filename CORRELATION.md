@@ -108,10 +108,64 @@
 
 *Reproducing the results of cor.test()*
 
+This code uses the methods we discussed to reproduce the results of `cor.test()`.
+
+Sample-data
+
 ```r
- 
+ set.seed(195021)
+ n=50
+ x=runif(n)
+ y=x+rnorm(n)
 ```
 
+`cor.test()` 
+
+```r
+ cor.test(x,y)
+```
+
+Estimate
+```r
+ COR=cor(x,y)
+ c(COR,cor.test(x,y)$estimate)
+```
+
+T-statistic 
+```r
+  SE=sqrt((1-COR^2)/(n-2))
+  tStat=COR/SE
+  c(tStat,cor.test(x,y)$statistic)
+```
+
+P-value (note that by default cor.test() produce two-sided p-values (this can be modified, try `help(cor.test)`)
+```r
+  pVal=2*pt(df=n-2,q=abs(tStat),lower.tail=FALSE)
+  c(pVal,cor.test(x,y)$p.value)
+```
+
+Confidence interval (let's to a 90% CI)
+
+```r
+ # CI based on Fisher's z-transform
+  COR=cor(x,y)
+  Z= 0.5*log((1+COR)/(1-COR))
+  n=length(x)
+  SE.Z=sqrt(1/(n-3))
+
+  # CI for Z
+   CI.Z= Z+c(-1,1)*SE.Z*qnorm(.975) # aprox. 1.96
+  	
+  # Fisher's inverse transformation
+   zInv=function(z){
+    	r=(exp(2*z)-1)/(1+exp(2*z))
+    	return(r)
+	}
+   # CI
+   CI.R=zInv(CI.Z)
+ 
+  rbind(cor.test(x,y)$conf.int,CI.R)
+```
 ### Using heatmaps and hierarichal clustering to explore correlation patterns
 
 **Blood-biomarker data set**
@@ -133,9 +187,6 @@
   clust=hclust(dist(t(Y))) # hclust takes a distance matrix as input.
   plot(clust)
   
- 
-
 ```
-**Note**: compare the results obtained with Fisher's Z-transform and those from `cor.test(x,y)`.
 
 
