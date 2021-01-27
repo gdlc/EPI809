@@ -154,17 +154,18 @@ Confidence interval (let's to a 90% CI)
   SE.Z=sqrt(1/(n-3))
 
   # CI for Z
-   CI.Z= Z+c(-1,1)*SE.Z*qnorm(.975) # aprox. 1.96
+   CI.Z= Z+c(-1,1)*SE.Z*qnorm(.95) 
   	
   # Fisher's inverse transformation
    zInv=function(z){
-    	r=(exp(2*z)-1)/(1+exp(2*z))
-    	return(r)
+    	  r=(exp(2*z)-1)/(1+exp(2*z))
+    	  return(r)
 	}
+	
    # CI
    CI.R=zInv(CI.Z)
  
-  rbind(cor.test(x,y)$conf.int,CI.R)
+   rbind(cor.test(x,y,conf.level=0.9)$conf.int,CI.R)
 ```
 ### Using heatmaps and hierarichal clustering to explore correlation patterns
 
