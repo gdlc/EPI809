@@ -76,10 +76,54 @@ Using the following data:
 
 1) Use `cor.test` to obtain an estimate, SE, CI and a p-value for H0: r=0 Vs Ha: r>=0
 2) Obtain the same results assuming that the correlation coefficient follows a normal distribution.
-3) Obtain the same results using Fisher's Z-transform.
 
+```r
+  cor.test(x,y)
+  COR=cor(x,y)
+  SE=sqrt((1-COR^2)/(n-2))
+  tStat=COR/SE
+  
+  # three ways of doing the CI
+  COR+c(-1,1)*1.96*SE # note, due to rounding, the two CIs are sligltly different
+  qnorm(mean=COR,sd=SE,p=c(.025,.975))
+  COR+qnorm(p=c(0.025,.975))*SE 
+  
+  # p-value
+  H0=0
+  tStat=(COR-H0)/SE
+  
+  ## Two ways of getting a one-sided p-value
+  pnorm(q=tStat,lower.tail=FALSE)
+  pnorm(q=COR,mean=0,sd=SE,lower.tail=FALSE)
+  
+  # For two-sided pvalue multiply by 2
+```
 
 ### In-class 3
+
+1) Using the data simulated for in-class 2:
+  - calculate a 90% and a 95% CI for the correlation using Fisher's Z-transform (do not use cor.test)
+  - caluclate a one-sided p-value for H0: Cor=0 and Cor=0.8 (do not use cor.test)
+  - repeat your analysis using cor.test() and compare your results
+  
+```r
+ 
+```
+
+Sumbit your file with the script for the above problem
+
+**Bonus: Displaying correlation matrices and heatmaps** [No need to submit this]
+
+Often we need to examine correlations between multiple variables. The `cor()` function can take a matrix as an input (variables in columns) and will return a correlation matrix.
+Heatmap can be used to display these matrices and examine clustering. The following exmaple illustrate this.
+
+```r
+
+
+
+```
+
+### In-class 4
 
 Using Galton's data set compute and report:
   - Correlation between offspring height and mid-parental hight (report point estimate, p-value and 95% CI)
@@ -95,9 +139,9 @@ Using Galton's data set compute and report:
 
 There is a modertaly high correlation between child's height and mid-parental height (~0.46) and this correlation is statistically different than zero at a singnificance level of 0.01. On average we expect an increase in 0.65 inches in child's height per additional inch in midparental height.
 
-### [In-class 4](https://www.dropbox.com/s/wfnnwxgmijcgun1/INCLASS_4.docx?dl=0)
+### [In-class 5](https://www.dropbox.com/s/wfnnwxgmijcgun1/INCLASS_4.docx?dl=0)
 
-### [In-class 5](https://www.dropbox.com/s/ldup9sbedl80081/INCLASS_5.docx?dl=0)
+### [In-class 6](https://www.dropbox.com/s/ldup9sbedl80081/INCLASS_5.docx?dl=0)
 
-### [In-class 6](https://www.dropbox.com/s/8vb5pvc76bzipvj/INCLASS_6.docx?dl=0)
+### [In-class 7](https://www.dropbox.com/s/8vb5pvc76bzipvj/INCLASS_6.docx?dl=0)
 
