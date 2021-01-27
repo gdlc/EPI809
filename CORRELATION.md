@@ -63,11 +63,6 @@
 
 **Inference**
 
-```r
- cor.test(x,y)
-```
-
-The following code replicates the output of `cor.test`
 
 *Correlation coefficient and it's SE*
 
@@ -109,8 +104,8 @@ The following code replicates the output of `cor.test`
     
 	}	
  CI.R.FISHER=zInv(CI.Z)
- rbind(CI.NORM,CI.T,CI.R.FISHER)	
+ rbind(CI.NORM,CI.R.FISHER)	
 ```
-
+**Note**: compare the results obtained with Fisher's Z-transform and those from `cor.test(x,y)`.
 
 
