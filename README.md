@@ -37,15 +37,8 @@ The first module will take the first half of the course and will be the focus of
   - **Datasets:** [Gout](https://github.com/gdlc/EPI809/blob/master/gout.txt) | [Wages](https://github.com/gdlc/EPI809/blob/master/wages.txt).
   - **[In-class assigments](https://github.com/gdlc/EPI809/blob/master/INCLASS.md)**
   - **[Homework](https://github.com/gdlc/EPI809/blob/master/HW.md)**
-  - **Slides:** 
-    - [Covariance & Correlation](https://github.com/gdlc/EPI809/blob/master/1_CORRELATION.pdf)
-    - [Simple Linear Regression](https://github.com/gdlc/EPI809/blob/master/2_SIMPLE_LINEAR_REGRESSION.pdf)
-    - [Dummy variables in linear regression](https://github.com/gdlc/EPI809/blob/master/3_DUMMY_VARIABLES_IN_LINEAR_REGRESSION.pdf)
-    - [Multiple Linear Regression](https://github.com/gdlc/EPI809/blob/master/4_MULTIPLE_LINEAR_REGRESSION.pdf)
-    - [ANOVA & Testing in the MLR model](https://github.com/gdlc/EPI809/blob/master/5_ANOVA_AND_TESTING_IN_MLR.pdf)
-    - [F-test, t-test & Multiple-testing](https://github.com/gdlc/EPI809/blob/master/6_TESTING_IN_MLR_II.pdf)
-    - [Interactions (Factor-by-Factor, Factor-by-Covariate)](https://github.com/gdlc/EPI809/blob/master/7_INTERACTIONS.pdf)
-    
+  - **Slides:** are available in D2L.
+     
   - **R-scripts**
     - [Correlation](https://github.com/gdlc/EPI809/blob/master/CORRELATION.md)
     - [Simple linear regression & ANOVA](https://github.com/gdlc/EPI809/blob/master/ANOVA.md)
