@@ -2,7 +2,7 @@
 
 ## HW1: Correlation and Linear Regression
 
-**Due  Jan 24th in D2L**
+**Due  Wed., Feb. 10, 2021 in D2L**
 
 **1: Correlation**
   
