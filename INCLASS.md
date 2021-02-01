@@ -130,11 +130,11 @@ Using Galton's data set compute and report:
   - The estimated intercept and slope from the regression of offsping height on mid-parental height (use the `lm()` R-function).
   - Summarize your conclusions in no more than 2 sentences.
   
-  
+
  **Proposed Solution**
  
 ```r
-
+  DATA=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/GALTON.txt',header=TRUE)
 ```
 
 ### [In-class 5](https://www.dropbox.com/s/wfnnwxgmijcgun1/INCLASS_4.docx?dl=0)
