@@ -7,7 +7,7 @@
 | Mon., Feb. 1, 2021  |  4		       |11.1-11.5|   Parameter estimation via OLS	|HW1-posted|	
 | Wed., Feb. 3, 2021  | 	5| 11.1-11.5|	Estimation of the error variance & inference on the slope (t-test) | |
 | Mon., Feb. 8, 2021	   | 	6|	11.6|	Godness of fit & model diagnostics|	 |
-| Wed., Feb. 10, 2021  | 7	|12.1|	Comparison between two means using a linear model	| |
+| Wed., Feb. 10, 2021  | 7	|12.1|	Comparison between two means using a linear model	| HW1-Due |
 | Mon., Feb. 15, 2021	   | 	8	|11.9	|Multiple-linear regression (1 dummy, 1 covariate)	|HW2-posted|
 | Wed., Feb. 17, 2021   | 	9	|	|Multilevel factors: coding, parameter interpretation	| |
 | Mon., Feb. 22, 2021	   | 	10	| 11.9 | Inference in the MLR (F-test and t-test)|	  |
