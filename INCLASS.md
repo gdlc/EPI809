@@ -173,3 +173,20 @@ Using Galton's data set compute and report:
 -  The average change in the expected offspring height per inch change in mid-parental height is 0.646 inches. The estimated slope is significantly different than zero.
 
 
+### In-class  5
+
+Reproducing results from `lm()`
+
+Using the following data:
+
+```r
+  DATA=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/GALTON.txt',header=TRUE)
+  DATA=DATA[1:15,]
+
+```
+
+i) Estimate the regression of offspring height on mid-parental height using lm. Report Estimates, SEs, and p-values (hint: use `summary()`).
+
+ii) Used the methods discussed in class to reproduce the t-statistic and the p-values produced by `lm()` starting from the estimates and SE produced by lm(). hint: to get the estimates you can use `ssummary(fm)$coef`, the first column contains estimates and the 2nd one SEs.
+
+
