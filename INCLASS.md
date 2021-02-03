@@ -173,9 +173,3 @@ Using Galton's data set compute and report:
 -  The average change in the expected offspring height per inch change in mid-parental height is 0.646 inches. The estimated slope is significantly different than zero.
 
 
-### [In-class 5](https://www.dropbox.com/s/wfnnwxgmijcgun1/INCLASS_4.docx?dl=0)
-
-### [In-class 6](https://www.dropbox.com/s/ldup9sbedl80081/INCLASS_5.docx?dl=0)
-
-### [In-class 7](https://www.dropbox.com/s/8vb5pvc76bzipvj/INCLASS_6.docx?dl=0)
-
