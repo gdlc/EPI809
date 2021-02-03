@@ -105,21 +105,46 @@ Using the following data:
   - calculate a 90% and a 95% CI for the correlation using Fisher's Z-transform (do not use cor.test)
   - caluclate a one-sided p-value for H0: Cor=0 and Cor=0.8 (do not use cor.test)
   - repeat your analysis using cor.test() and compare your results
-  
+
+Sumbit your file with the script for the above problem.
+
+ **90% CI** (for 95% change alpha below)
 ```r
+ alpha=0.1
  
+ set.seed(195021)
+ n=50
+ x=runif(n)
+ y=x+rnorm(n)/8
+ 
+ COR=cor(x,y)
+ 
+ Z= 0.5*log((1+COR)/(1-COR))
+ SE.Z=sqrt(1/(n-3))  
+
+# CI for Z
+ CI.Z= qnorm(mean=Z,sd=SE.Z, p=c(alpha/2,1-alpha/2))
+ 
+ # Now we map it back to the COR scale
+   zInv=function(z){ (exp(2*z)-1)/(1+exp(2*z))}
+   
+ CI.R.FISHER=zInv(CI.Z)
+ 
+ # Compare with
+  cor.test(x,y,conf.level=0.9) 
+```
+**P-value for H0: COR>0**
+
+A correlation =0 corresponds to a Z-transform of zero.
+```r
+ pnorm(mean=0,sd=SE.Z,q=Z,lower.tail=FALSE)
+ cor.test(x,y,alternative='greater')
 ```
 
-Sumbit your file with the script for the above problem
-
-**Bonus: Displaying correlation matrices and heatmaps** [No need to submit this]
-
-Often we need to examine correlations between multiple variables. The `cor()` function can take a matrix as an input (variables in columns) and will return a correlation matrix.
-Heatmap can be used to display these matrices and examine clustering. The following exmaple illustrate this.
-
+**P-value for H0: COR>0.8**
 ```r
-
-
+ Z.H0=0.5*log((1+0.8)/(1-0.8))
+ pnorm(mean=Z.H0,sd=SE.Z,q=Z,lower.tail=FALSE)
 
 ```
 
@@ -135,7 +160,18 @@ Using Galton's data set compute and report:
  
 ```r
   DATA=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/GALTON.txt',header=TRUE)
+  
+  cor.test(DATA$Child,DATA$Midparent)
+  
+  tmp=lm(Child~Midparent,data=DATA)
+  summary(tmp)
+
 ```
+
+- The estimated correlation between an offspring's height and the midparent height was 0.46 (95% CI 0.406,0.508), and it is statistically signficantly different than zero.
+
+-  The average change in the expected offspring height per inch change in mid-parental height is 0.646 inches. The estimated slope is significantly different than zero.
+
 
 ### [In-class 5](https://www.dropbox.com/s/wfnnwxgmijcgun1/INCLASS_4.docx?dl=0)
 
