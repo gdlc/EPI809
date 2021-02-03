@@ -187,7 +187,7 @@ Using the following data:
 
 i) Estimate the regression of offspring height on mid-parental height using lm, report: Estimates, SEs, and p-values (hint: use `summary()`).
 
-ii) Used the methods discussed in class to reproduce the t-statistic and the p-values produced by `lm()` starting from the estimates and SE produced by lm(). hint: to get the estimates you can use `ssummary(fm)$coef`, the first column contains estimates and the 2nd one SEs.
+ii) Used the methods discussed in class to reproduce the t-statistic and the p-values produced by `lm()` starting from the estimates and SE produced by lm(). hint: to get the estimates you can use `summary(fm)$coef`, the first column contains estimates and the 2nd one SEs.
 
 iii) Repeat (i) and (ii) using the first 100 rows of DATA instead of the top 15. How did SE and p-values changed?
 
