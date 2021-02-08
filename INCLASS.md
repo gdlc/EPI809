@@ -191,4 +191,29 @@ ii) Used the methods discussed in class to reproduce the t-statistic and the p-v
 
 iii) Repeat (i) and (ii) using the first 100 rows of DATA instead of the top 15. How did SE and p-values changed?
 
+**Proposed solution**
 
+```r
+  DATA=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/GALTON.txt',header=TRUE)
+  
+  # i)
+  fm=lm(Child~Midparent,data=DATA[1:15,])
+  summary(fm)
+  
+  # ii)
+  est=coef(fm)[2]
+  SE=summary(fm)$coef[2,2]
+  tStat=est/SE
+  df=15-length(coef(fm))
+  pVal_norm=2*pnorm(q=abs(tStat),lower.tail=FALSE) # for n=15 we should use the t-dist not the normal
+  pVal_t=2*pt(q=abs(tStat),df=df,lower.tail=FALSE)
+  
+  pVal_t
+  pVal_norm
+  
+  # iii)
+   fm2=lm(Child~Midparent,data=DATA[1:100,])
+   summary(fm2)
+ ```
+ 
+ With larger sample size, the SE gets smaller, and the p-value becomes smaller than 0.05.
