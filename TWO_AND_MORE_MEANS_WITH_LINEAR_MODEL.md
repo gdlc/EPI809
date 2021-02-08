@@ -68,7 +68,7 @@ When a predictor variable (feed in the example below) is of type character or fa
 
 **ANOVA**
 
-The model involves 6 parameters, therefore, the model DF are 5 (p-1)
+The code below replicates the calculations underlying the `anova()` function. 
 
 ```r
   # Sum of squares
