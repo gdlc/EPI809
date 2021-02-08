@@ -64,27 +64,8 @@ When a predictor variable (feed in the example below) is of type character or fa
  summary(fm)
  mean(chickwts$weight[chickwts$feed==horsebean])
  coef(fm)[1]+coef(fm)[2]
-```
-
-**ANOVA**
-
-The code below replicates the calculations underlying the `anova()` function. 
-
-```r
-  # Sum of squares
-   y=chickwts$weight
-   TSS=sum((y-mean(y))^2)
-   RSS=sum(residuals(fm)^2)
-   MSS=TSS-RSS
-  
-  # Degrees of freedom
-   p=length(coef(fm)) # number of parameters
-   n=length(y) # sample size
-   MODEL.DF=p-1
-   RES.DF=n-p
-   TOTAL.DF=n-1
-  
-  anova(fm)
+ 
+ anova(fm)
 ```
 
 
