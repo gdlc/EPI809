@@ -221,7 +221,7 @@ iii) Repeat (i) and (ii) using the first 100 rows of DATA instead of the top 15.
 
 ### In-class  6: ANOVA
 
-For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/chickwts.html) reporduce the results of the ANOVA table, that is, use the data and the fitted model to determine the model, total, and residual DF, and SS. Compute the MS, the F-statistic, and the corresponding p-value.
+For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/chickwts.html) reproduce the results of the ANOVA table, that is, use the data and the fitted model to determine the model, total, and residual DF, and the corresponding sum of squares. Compute the MS-squares, the F-statistic, and the corresponding p-value.
 
 ```r
   library(stats)
