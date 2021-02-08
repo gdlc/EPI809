@@ -216,7 +216,7 @@ iii) Repeat (i) and (ii) using the first 100 rows of DATA instead of the top 15.
    summary(fm2)
  ```
  
- With larger sample size, the SE gets smaller, and the p-value becomes smaller than 0.05.
+ With larger sample size, the SE gets smaller, and the p-value becomes smaller than 0.01.
 
 
 ### In-class  6: ANOVA
