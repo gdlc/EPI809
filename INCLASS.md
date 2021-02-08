@@ -217,3 +217,15 @@ iii) Repeat (i) and (ii) using the first 100 rows of DATA instead of the top 15.
  ```
  
  With larger sample size, the SE gets smaller, and the p-value becomes smaller than 0.05.
+
+
+### In-class  6: ANOVA
+
+For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/chickwts.html) reporduce the results of the ANOVA table, that is, use the data and the fitted model to determine the model, total, and residual DF, and SS. Compute the MS, the F-statistic, and the corresponding p-value.
+
+```r
+  library(stats)
+  data(chickwts)
+  fm=lm(weight~feed,data=chickwts)
+  anova(fm)
+```
