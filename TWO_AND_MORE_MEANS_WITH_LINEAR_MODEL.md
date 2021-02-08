@@ -86,3 +86,20 @@ The code below replicates the calculations underlying the `anova()` function.
   
   anova(fm)
 ```
+
+
+**The model.matrix() function**
+
+In a linear model, the incidence matrix for effects, is a matrix whose columns contain the predictors (either dummy variables or continous covariates). If the model involves *p* parameter and the sample size is *n*, the incidence matrix has *n* rows and *p* columns. 
+
+The function `lm(y~sex+age+...,data=...)` takes the variables on the right-hand-side of the formula (`~sex+age+...`) and produces the incidence matrix for the model. By default (unlesss `-1`, e.g., `~age+sex-1`, is used in the formula, the first column of the incidence matrix is a vector of ones, which is the incidence vector for the intercetp. The remaining columns are either covariates or dummy-variables associated to factors in the model (e.g. sex, ethnicity). The following example illustrates how `model.matrix()` works.
+
+```r
+ X=model.matrix(~feed,data=chickwts)
+ dim(X)
+ head(X,20)
+ 
+ fm=lm(weight~feed,data=chickwts)
+ summary(fm)
+
+```
