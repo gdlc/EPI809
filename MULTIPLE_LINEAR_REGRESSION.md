@@ -6,14 +6,15 @@ The following example presents a regression of wage on ethnicity, this factor ha
 If we create three dummy variables (B/H/W), the sum  of the three dummies is always equal to 1–these three variables are colinear. Thus, we cannot fit a model with an intercept and three dummies. There are two standard parameterizations used for these models: (a) The means model uses one dummy per group without including an intercept. (b) The dummy coding fits a model with an intercept plus q-1 dummies, where q is the number of levels of the factor. The two models are statistically equivalent; however the interpretation of the parameters differ.
 
 ```r
- DATA=read.table('~/Desktop/wages2.txt',header=T)
+ fname='https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt'
+ DATA=read.table(file=fname,header=T)
  
  attach(DATA) # attachs the variables to the environment...
  
  ## Creating the dummy variables
- B=ifelse(DATA$ethnicity=='B',1,0)
- H=ifelse(DATA$ethnicity=='H',1,0)
- W=ifelse(DATA$ethnicity=='W',1,0)
+ B=ifelse(DATA$ethnicity=='Black',1,0)
+ H=ifelse(DATA$ethnicity=='Hispanic',1,0)
+ W=ifelse(DATA$ethnicity=='Other',1,0)
  
  
  ## Means model: three dummies, no intercept
