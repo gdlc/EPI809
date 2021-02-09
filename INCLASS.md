@@ -229,3 +229,31 @@ For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/dataset
   fm=lm(weight~feed,data=chickwts)
   anova(fm)
 ```
+
+**Proposed solution**
+
+```r
+  # Sum of squares
+   y=chickwts$weight
+   TSS=sum((y-mean(y))^2) # total SS (SS after fitting H0)
+   RSS=sum(residuals(fm)^2) # residual SS (SS after fitting Ha)
+   MSS=TSS-RSS   # model SS
+  
+  # Degrees of freedom
+   p=length(coef(fm)) # number of parameters
+   n=length(y) # sample size
+   MODEL.DF=p-1
+   RES.DF=n-p
+   TOTAL.DF=n-1
+   
+   ANOVA=data.frame('Source'=c('Model','Residual','Total'),'SS'=c(MSS,RSS,TSS),'DF'=c(MODEL.DF,RES.DF,TOTAL.DF))
+   ANOVA$MS=c(ANOVA$SS[1]/ANOVA$DF[1],ANOVA$SS[2]/ANOVA$DF[2] ,NA)
+   ANOVA$F=c(ANOVA$MS[1]/ANOVA$MS[2],NA,NA)
+   ANOVA$pVal=c(pf(q=ANOVA$F[1],df1=ANOVA$DF[1],df2=ANOVA$DF[2],lower.tail=FALSE),NA,NA)
+   
+   # Compare
+   ANOVA
+   
+   # with 
+   anova(fm)
+```
