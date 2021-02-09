@@ -18,21 +18,21 @@ If we create three dummy variables (B/H/W), the sum  of the three dummies is alw
  
  
  ## Means model: three dummies, no intercept
- fm1=lm(Wage~B+H+W-1) #'-1' tells lm to exclude the intercept
- fm2=lm(Wage~ethnicity-1,data=DATA) #'-1' tells lm to exclude the intercept
+ fm1=lm(wage~B+H+W-1) #'-1' tells lm to exclude the intercept
+ fm2=lm(wage~ethnicity-1,data=DATA) #'-1' tells lm to exclude the intercept
  summary(fm1)
  summary(fm2)
  
  
  # In the 'means model' parameter estimates are just the means of the group 
  # (if we had covariates these would be group-specific intercepts)
- mean(Wage[B==1])
- mean(Wage[H==1])
- mean(Wage[W==1])
+ mean(wage[B==1])
+ mean(wage[H==1])
+ mean(wage[W==1])
  
  
  ## Dummy coding: intercept + two dummy variables
- fm3=lm(Wage~ethnicity,data=DATA)
+ fm3=lm(wage~ethnicity,data=DATA)
 
  # fm1 and fm2 are just two parameterization of the same model:
  plot(predict(fm1),predict(fm3))
@@ -47,11 +47,11 @@ Challenge: recover the mean of each group from the parameter estimates of `fm2`
 The `model.matrix` function create the incidence matrix used by `lm`.
 
 ```r
-  W=model.matrix(~ethnicity)
-  head(W)
+  X=model.matrix(~ethnicity)
+  head(X)
   
-  W=model.matrix(~ethnicity-1)
-  head(W)
+  X=model.matrix(~ethnicity-1)
+  head(X)
 ```
 Once the incidence matrix is crated, the columns of `W` are treated as quantitative variables.
 
