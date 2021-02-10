@@ -257,3 +257,23 @@ For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/dataset
    # with 
    anova(fm)
 ```
+
+### In-class  7: Coding of factors and prediction equations
+
+1) Using the wages data set:
+
+  - Fit a linear regresssion on ethnicity using dummy coding (i.e., two dummy variables and one reference category, the default behavior of lm) and derive from the output the average wage of each group.
+  - Verify your results by fitting the same model using a means-model parameterization.
+  
+ 2) Extend the model of question 1 by adding education:
+ 
+  - Fit the model
+  - Report the estimated prediction equations for each ethnic group in the form of intercept+education\*slope
+  
+ 3) Repeat # 2 with means coding (i.e., using wage~ethnicity+education -1)
+ 
+ 4) What is the predicted wage for a hispanic with 12 years of eucation?  What about black with 12 years of education? What about Hispanic with 15 years of education?
+  
+
+
+
