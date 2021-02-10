@@ -43,7 +43,7 @@ Using the data provided in Table  11.1 (p 459), reproduce the results of Figure 
   
 ## HW2: Multiple Linear Regression
 
-Due Feb 14th in D2L
+Due Feb 24th in D2L
 
 In the HW you will use the [gout](https://github.com/gdlc/EPI809/blob/master/gout.txt) data set available in our github repository. 
 
