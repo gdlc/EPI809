@@ -31,16 +31,49 @@ If we create three dummy variables (B/H/W), the sum  of the three dummies is alw
  mean(wage[W==1])
  
  
- ## Dummy coding: intercept + two dummy variables
+ ## Dummy coding: intercept + two dummy variables (the default in lm())
  fm3=lm(wage~ethnicity,data=DATA)
 
  # fm1 and fm2 are just two parameterization of the same model:
  plot(predict(fm1),predict(fm3))
  plot(residuals(fm1),residuals(fm3))
+ 
+ sum(residuals(fm1)^2))
+ sum(residuals(fm2)^2))
+ sum(residuals(fm3)^2))
+ 
 
 ```
 
 Challenge: recover the mean of each group from the parameter estimates of `fm2`
+
+
+**Setting the order of the levels of a factor**
+
+By default, R orders the levels of a factor based on alphabetical order. The first level is then picked as the reference group.  
+
+```r
+  ethnicity=DATA$ethnicity
+  str(ethnicity) # a character variable
+  
+  ethnicity=factor(ethnicity) # a factor with three levels
+  
+  levels(ethnicity) # the order of the levels.
+  
+  wage=DATA$wage
+  fm=lm(wage~ethnicity)
+  
+  summary(fm)
+```
+
+You can tell R which one should be the reference group by chainging the order of the levels of a factor.
+
+```r
+ levels(ethnicity)=c('Black','Other','Hispanic')
+ fm=lm(wage~ethnicity)
+ summary(fm)
+```
+
 
 **How does lm construct the contrasts (dummy variables in this case)?**
 
@@ -60,6 +93,5 @@ Once the incidence matrix is crated, the columns of `W` are treated as quantitat
 ```r
  fm4=lm(Wage~ethnicity+Education,data=DATA)
  summary(fm4)
- 
 ```
 
