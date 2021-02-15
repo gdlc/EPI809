@@ -270,10 +270,66 @@ For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/dataset
   - Fit the model
   - Report the estimated prediction equations for each ethnic group in the form of intercept+education\*slope
   
- 3) Repeat # 2 with means coding (i.e., using wage~ethnicity+education -1)
+ 3) Repeat # 2 with means coding (i.e., using wage~education -1)
  
- 4) What is the predicted wage for a hispanic with 12 years of eucation?  What about black with 12 years of education? What about Hispanic with 15 years of education?
-  
+ 4) Repeat #3 adding Ethnicituy. What is the predicted wage for a female hispanic with 12 years of eucation?  
+
+**Proposed solution**
+
+
+```r
+ #1#
+   DATA=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=TRUE)
+   fm=lm(wage~sex,data=DATA) # by default lm uses a dummy coding, with intercept
+   
+   # mean for female
+   coef(fm)[1]
+   
+   # mean for males
+   sum(coef(fm))
+   
+   # Verifying
+   mean(DATA$wage[DATA$sex=='Male'])
+   mean(DATA$wage[DATA$sex=='Female'])
+   
+   fm2=lm(wage~sex-1,data=DATA) # using `-1` in the formula instructs lm to use the means-model parameterization
+   coef(fm2)
+   
+  #2#
+   fm=lm(wage~sex+education,data=DATA)
+   IntF=coef(fm)[1]
+   IntM=sum(coef(fm)[1:2])
+   slope=coef(fm)[3]
+   
+   # Equation for Female:   IntF + Education*slope
+   # Equation for Male:     IntM + Education*slope
+   
+   #3# 
+    fm2=lm(wage~sex+education-1,data=DATA)
+    IntF=coef(fm2)[1]
+    IntM=coef(fm2)[2]
+    slope=ceof(fm2)[3]
+    # Equation for Female:   IntF + Education*slope
+    # Equation for Male:     IntM + Education*slope    
+    
+   #4# 
+    fm3=lm(wage~sex+education+ethnicity-1,data=DATA)
+    
+    slope=coef(fm3)[3]
+    
+    IntFW=coef(fm3)[1]
+    IntFB=sum(coef(fm3)[c(1,5)])
+    IntFH=sum(coef(fm3)[c(1,4)])
+ 
+    IntMW=IntFW+coef(fm3)[2]
+    IntMB=IntFB+coef(fm3)[2]
+    IntMH=IntFH+coef(fm3)[2]
+    
+    # Prediction for female hispanic, 12 yr of education
+    IntFH+slope*12
+    predict(fm3,newdata=data.frame(education=12,ethnicity='Hispanic',sex='Female'))
+    
+```
 
 ### In-class  8: Estimation of error variance and diagnosis
 
