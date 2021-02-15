@@ -275,5 +275,13 @@ For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/dataset
  4) What is the predicted wage for a hispanic with 12 years of eucation?  What about black with 12 years of education? What about Hispanic with 15 years of education?
   
 
+### In-class  8: Estimation of error variance and diagnosis
+
+Using the [gout](https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt) data set (use `sep=' '`):
+
+  - Fit a linear regression for each of the blood biomarkers (UricAcid Creatinine BMI SBP Glucose HDL LDL Triglycerides).
+  - For each of them estimate the error variance and an approximate R-squared (esitmated error variance / var(y) ). Verify your results by comparing with the results of `summary(fm)$r.squared`.
+  - Conduct diagnosis analysis. Identify and report possible outliers and whether you think some of the traits may need to be transformed.
+ 
 
 
