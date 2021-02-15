@@ -9,30 +9,37 @@ After we fit the model we often check the residuals to:
 
 ```r
 
-Y=read.table('~/Dropbox/809/datasets/wages.txt',header=T)
+Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
 
-y=Y$Wage
-x=Y$Education
+y=Y$wage
+x=Y$education
 
 fm=lm(y~x)
 
+## Predictions, residuals, and standarized residuals
+ eHat=residuals(fm)
+ yHat=predict(fm)
+ eHatSTD=rstandard(fm)
 
+## Standarized residuals versus predictors
+ plot(eHatSTD~yHat)
 
-eHat=residuals(fm)
-yHat=predict(fm)
+## Histograms and quantile-quantile plots
+# Data
+ hist(y,30)
+ qqnorm(scale(y));abline(a=0,b=1)
+
+# Standarized residuals
+ hist(eHatSTD,30)
+ qqnorm(eHatSTD);abline(a=0,b=1)
+
+## Default diagnostic plots for lm
+ plot(fm)
 
 # Residual Vs fitted values
 # Look for: departures from linear patterns
 #           heterogeneous error variances
 
-plot(eHat~yHat)
 
-# Are residuals normal?
-hist(eHat,30)
-qqnorm(eHat)
-
-# Some of these plots are provided by the plot.lm() function
-
-plot(fm)
 
 ```
