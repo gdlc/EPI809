@@ -341,14 +341,14 @@ Using the [gout](https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt) 
  
 ### In-class 9: Testing in the MLR model
 
-  1) Using the gout data set test the following research questions. 
+**(1) Using the gout data set test the following research questions**: 
     - Does BMI, race, age, or sex have an effect on SBP?
     - Afer accounting for differences due to race and sex, does BMI or age have an effect on SBP?
     - After accounting for differences due to sex, age, and race, does BMI has an effect on SBP?
 
-For each of the above questions: (i) identify the null and alternativy hypothesis, (ii) Identify an adequate test (i.e., t or F test), (iii) implement the test, and (iv) state your conclusions.
+For each of the above questions: identify the null and alternativy hypothesis, identify an adequate test (i.e., t or F test),  implement the test, and state your conclusions.
    
-  2) What proportion of the variance of SBP can be explained by sex, age, and race?
+**(2) What proportion of the variance of SBP can be explained by sex, age, and race?**
 
-  3) What proportion of the variance of SBP that is un-explained by sex, race and age, can be explained by BMI?
+**(3) What proportion of the variance of SBP that is un-explained by sex, race and age, can be explained by BMI?**
 
