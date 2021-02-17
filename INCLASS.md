@@ -339,5 +339,19 @@ Using the [gout](https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt) 
   - For each of them estimate the error variance and an approximate R-squared (1- esitmated error variance / var(y) ). Verify your results by comparing with the results of `summary(fm)$r.squared`.
   - Conduct diagnosis analysis. Identify and report possible outliers and whether you think some of the traits may need to be transformed.
  
+### In-class 9: Testing in the MLR model
 
+1) Using the gout data set test the following research questions. 
+
+For each of the question: (i) identify the null and alternativy hypothesis, (ii) Identify an adequate test (i.e., t or F test), (iii) implement the test, and (iv) state your conclusions.
+ 
+ a) Does BMI, race, age, or sex have an effect on SBP?
+ 
+ b) Afer accounting for differences due to race and sex, does BMI or age have an effect on SBP?
+ 
+ c) After accounting for differences due to sex, age, and race, does BMI has an effect on SBP?
+ 
+2) What proportion of the variance of SBP can be explained by sex, age, and race?
+
+3) What proportion of the variance of SBP that is un-explained by sex, race and age, can be explained by BMI?
 
