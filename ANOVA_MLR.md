@@ -10,7 +10,7 @@ summary(fm)
 
 ```
 
-**Testing the model as a whole*: 
+*Testing the model as a whole*: 
 
 H0: all coefficients, except the intercept, are equal to zero.
 
