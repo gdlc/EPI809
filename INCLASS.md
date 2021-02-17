@@ -342,6 +342,7 @@ Using the [gout](https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt) 
 ### In-class 9: Testing in the MLR model
 
 **(1) Using the gout data set test the following research questions**: 
+
     - Does BMI, race, age, or sex have an effect on SBP?
     - Afer accounting for differences due to race and sex, does BMI or age have an effect on SBP?
     - After accounting for differences due to sex, age, and race, does BMI has an effect on SBP?
