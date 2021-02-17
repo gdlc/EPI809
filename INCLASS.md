@@ -258,6 +258,8 @@ For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/dataset
    anova(fm)
 ```
 
+
+
 ### In-class  7: Coding of factors and prediction equations
 
 1) Using the wages data set:
@@ -335,10 +337,52 @@ For the [chicken data set](https://stat.ethz.ch/R-manual/R-devel/library/dataset
 
 Using the [gout](https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt) data set (use `sep=' '`):
 
-  - Fit a linear regression for each of the blood biomarkers (UricAcid Creatinine BMI SBP Glucose HDL LDL Triglycerides).
-  - For each of them estimate the error variance and an approximate R-squared (1- esitmated error variance / var(y) ). Verify your results by comparing with the results of `summary(fm)$r.squared`.
+  -  For each of the blood biomarkers (UricAcid Creatinine BMI SBP Glucose HDL LDL Triglycerides) fit a linear regression on sex, age and ethnicity.
+  - For each of them, estimate the error variance and an approximate R-squared (1- esitmated error variance / var(y) ). Verify your results by comparing with the results of `summary(fm)$r.squared`.
   - Conduct diagnosis analysis. Identify and report possible outliers and whether you think some of the traits may need to be transformed.
+
+**Proposed solution**
+
+*Error variance and R-sq.*
+
+```r
+ DATA=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt',header=TRUE,sep=' ')
  
+  
+ y=DATA$UricAcid
+ fm=lm(y~Sex+Age+Race,data=DATA)
+ summary(fm)
+ 
+ eHat=residuals(fm)
+ n=length(eHat)
+ p=length(coef(fm))
+ 
+ TSS=sum((y-mean(y))^2)
+ RSS=sum(eHat^2)
+ varE=RSS/(n-p)
+ 1-varE/var(y)
+ 
+ summary(fm)$r.squared
+ SS.Reg=TSS-RSS
+ RSq=SS.Reg/TSS
+ RSq
+
+```
+*Diagnosis*
+
+```r
+ traits=c('UricAcid','Creatinine', 'BMI', 'SBP', 'Glucose', 'HDL','LDL', 'Triglycerides')
+ 
+
+ for(i in traits){
+   y=DATA[,i]
+   fm=lm(y~Sex+Age+Race,data=DATA)
+   eSTD=rstandard(fm)
+   qqnorm(eSTD,main=i);abline(a=0,b=1,col=2,lty=2)
+   Sys.sleep(5)
+ }
+```
+
 ### In-class 9: Testing in the MLR model
 
 **(1) Using the gout data set test the following research questions**: 
