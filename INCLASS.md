@@ -377,7 +377,7 @@ Using the [gout](https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt) 
  for(i in traits){
    y=DATA[,i]
    fm=lm(y~Sex+Age+Race,data=DATA)
-   plot(fm,which=2) 
+   plot(fm,which=2,main=i) 
    Sys.sleep(5)
  }
 ```
