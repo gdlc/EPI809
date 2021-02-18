@@ -1,3 +1,4 @@
+<div id="menu" />
 ### ANOVA
  
   - [Testing the model as a whole](#whole-model)
@@ -10,17 +11,32 @@
 
 **Testing the model as a whole**: 
 
+Does education, region, marital status, experience, union, sex, or ethnicity have any effect on wages?
+
+*Model (i.e., alternative hypothesis)*
+
+```r
+ Y=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=TRUE)
+ HA=lm(wage~education+region+married+experience+union+sex+ethnicity,data=Y)
+```
+
+*Null hypothesis*: 
 
 H0: all coefficients, except the intercept, are equal to zero.
 
 ```r
-
- Y=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=TRUE)
- HA=lm(wage~education+region+married+experience+union+sex+ethnicity,data=Y)
  H0=lm(wage~1,data=Y)
- anova(HO,HA)
- 
- # Reproducing the ANOVA table
+```
+
+*ANOVA-table*
+
+```r
+anova(HO,HA)
+```
+
+*Reproducing the ANOVA table*
+
+```r
  y=Y$wage
  yHat=predict(fm)
  eHatHa=residuals(fm)
@@ -51,10 +67,33 @@ H0: all coefficients, except the intercept, are equal to zero.
   anova(fm0,fm)
   
 ```
+[Back to menu](#whole-model)
 
 <div id="long-short" />
 
+
+## Short Vs Long Regression
+
+Do experience and education have an effect on wages aftera ccountin for differences in wages due to sex and region?
+
+```r
+Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
+head(Y)
+Y$region=factor(Y$region,levels=c('North','South'))
+fm0=lm(Wage~1)
+fmL=lm(wage~region+sex+experience+education,data=Y)
+fmS=lm(wage~region+sex,data=Y)
+anova(fmL)
+anova(fmS)
+anova(fmS,fmL)
+
+```
+[Back to menu](#whole-model)
+
+
 <div id="1DF" />
+
+[Back to menu](#whole-model)
 
 
 
@@ -143,18 +182,4 @@ Anova(fm,type='III') # SS when each factor is entered last
 ```
 
 
-## Short Vs Long Regression
 
-```r
-
-Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
-head(Y)
-Y$region=factor(Y$region,levels=c('North','South'))
-fm0=lm(Wage~1)
-fmL=lm(wage~region+sex+experience+education,data=Y)
-fmS=lm(wage~region+sex,data=Y)
-anova(fmL)
-anova(fmS)
-anova(fmS,fmL)
-
-```
