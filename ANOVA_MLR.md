@@ -1,5 +1,6 @@
-This entry shows how to perform Analysis of Variance in the Multiple Linear Regression Model.
-
+### ANOVA
+ 
+  - [Testing the model as a whole](#whole-model)
 
 **The `anova` function applied to multiple-linear regression models**
 
@@ -10,7 +11,8 @@ summary(fm)
 
 ```
 
-*Testing the model as a whole*: 
+<div id="whole-model" />
+**Testing the model as a whole**: 
 
 H0: all coefficients, except the intercept, are equal to zero.
 
