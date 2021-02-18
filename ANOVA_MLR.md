@@ -92,8 +92,27 @@ anova(fmS,fmL)
 [Back to menu](#menu)
 
 
-<div id="1DF" />
+## 1DF Test: F- and t-test
 
+Research question: Does sex have an effect on wages aftera accountig for differences due to region, experience and education?
+
+<div id="1DF" />
+```r
+ Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
+ head(Y)
+ Y$region=factor(Y$region,levels=c('North','South'))
+ HA=lm(wage~region+experience+education+sex,data=Y)
+ H0=lm(wage~region+experience+education,data=Y)
+ 
+ # F-test
+ anova(H0,HA)
+ 
+ # Compare with the t-test for sex
+ summary(HA)
+ 
+ # The squared of the t-statistic should be equal to the F-statistic of the ANOVA table
+ summary(HA)$coef[5,3]^2
+```
 [Back to menu](#menu)
 
 
