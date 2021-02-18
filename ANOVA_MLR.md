@@ -5,6 +5,7 @@
   - [Testing the model as a whole](#whole-model)
   - [Long versus Short regression](#long-short)
   - [1df Test](#1DF)
+  - [Sequential ANOVA](#sequentialANOVA)
   - [Testing individual factors using Type-III SS](#type-III)
 
 
@@ -117,7 +118,9 @@ Research question: Does sex have an effect on wages aftera accountig for differe
 
 
 
-<div id="type-III" />
+
+<div id="sequentialANOVA" />
+
 
 **Sequential ANOVA**
 
@@ -157,8 +160,11 @@ When we apply the `anova` function to a fitted model we obtain a decomposition o
 
 However, as noted, if you change the order of the variables in the model, the Type-I (sequential) SS will change.
 
-**Type-III SS**: quantifies the variability a factor can explain, after accountig for all the other factors in the model.
 
+
+<div id="type-III" />
+
+**Type-III SS**: quantifies the variability a factor can explain, after accountig for all the other factors in the model.
 
 
 
