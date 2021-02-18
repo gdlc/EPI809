@@ -1,6 +1,6 @@
 <div id="menu" />
 
-### ANOVA
+## ANOVA
  
   - [Testing the model as a whole](#whole-model)
   - [Long versus Short regression](#long-short)
@@ -10,18 +10,18 @@
 
 <div id="whole-model" />
 
-**Testing the model as a whole**: 
+### 1) Testing the model as a whole 
 
 Does education, region, marital status, experience, union, sex, or ethnicity have any effect on wages?
 
-*Model (i.e., alternative hypothesis)*
+**Model (i.e., alternative hypothesis)**
 
 ```r
  Y=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=TRUE)
  HA=lm(wage~education+region+married+experience+union+sex+ethnicity,data=Y)
 ```
 
-*Null hypothesis*: 
+**Null hypothesis**: 
 
 H0: all coefficients, except the intercept, are equal to zero.
 
@@ -29,13 +29,13 @@ H0: all coefficients, except the intercept, are equal to zero.
  H0=lm(wage~1,data=Y)
 ```
 
-*ANOVA-table*
+**ANOVA-table**:
 
 ```r
 anova(HO,HA)
 ```
 
-*Reproducing the ANOVA table*
+**Reproducing the ANOVA table**:
 
 ```r
  y=Y$wage
@@ -78,15 +78,13 @@ anova(HO,HA)
 Do experience and education have an effect on wages aftera ccountin for differences in wages due to sex and region?
 
 ```r
-Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
-head(Y)
-Y$region=factor(Y$region,levels=c('North','South'))
-fm0=lm(Wage~1)
-fmL=lm(wage~region+sex+experience+education,data=Y)
-fmS=lm(wage~region+sex,data=Y)
-anova(fmL)
-anova(fmS)
-anova(fmS,fmL)
+ Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
+ head(Y)
+ Y$region=factor(Y$region,levels=c('North','South'))
+
+ fmL=lm(wage~region+sex+experience+education,data=Y)
+ fmS=lm(wage~region+sex,data=Y)
+ anova(fmS,fmL)
 
 ```
 [Back to menu](#menu)
@@ -118,58 +116,47 @@ Research question: Does sex have an effect on wages aftera accountig for differe
 
 <div id="typeIII" />
 
-
 **Sequential ANOVA**
 
 When we apply the `anova` function to a fitted model we obtain a decomposition of the variance for each factor. By default, R performs sequential ANOVA. Sequential (or type-I) ANOVA is not invariant to the order in which predictors enter in the model. The following example reproduces the sequential ANOVA produce by `anova()` using sequential regressions. 
 
 ```r
-rm(list=ls()) # cleans the environment
-Y=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
+ rm(list=ls()) # cleans the environment
+ Y=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
 
-fm0=lm(wage~1,data=Y)
-fm=lm(wage~education+sex+ethnicity,data=Y)
-anova(fm0,fm)
-
-anova(fm)
-
-## Sequential anova
- # Null hypothesis
- eHat0=residuals(fm0) # Intercept only
-
- # Add education
- fm1=lm(eHat0~education,data=Y) # Intercept plus education
- eHat1=residuals(fm1)
- sum(eHat0^2)-sum(eHat1^2) # variance explained by education
-
- # Add sex
- fm2=lm(wage~education+sex,data=Y) # Intercept+Education + sec
- eHat2=residuals(fm2)
- sum(eHat1^2)-sum(eHat2^2) # variance explained by sex that was not 
-                           # explained by education.
- # Add ethnicity
- fm3=lm(eHat2~education+sex+ethnicity,data=Y)
- eHat3=residuals(fm3)
- sum(eHat2^2)-sum(eHat3^2)
- 
- sum(eHat3^2) # final RSS
-
+ fm=lm(wage~education+sex+ethnicity,data=Y)
+ anova(fm)
 ```
 
-What happens if we change the order we enter variables in the model?
+**The following code shows how a sequential (Type-I) ANOVA can be reproduced by adding one factor at a time**
 
 ```r
-fm=lm(Wage~Education+sex+ethnicity,data=Y)
-fm2=lm(Wage~sex+ethnicity+Education,data=Y)
-anova(fm0,fm)
-anova(fm0,fm2)
-anova(fm)
-anova(fm2)
+
+ fm0=lm(wage~1,data=Y)
+ fm1=lm(wage~education,data=Y)
+ fm2=lm(wage~education+sex,data=Y)
+ fm3=lm(wage~education+sex+ethnicity,data=Y)
+ 
+ RSS0=sum(residuals(fm0)^2)
+ RSS1=sum(residuals(fm1)^2) 
+ RSS2=sum(residuals(fm2)^2)
+ RSS3=sum(residuals(fm3)^2)
+ 
+ anova(fm)
+ 
+ #compare Sum of Squares from anova(fm) with this
+ 
+ RSS0-RSS1
+ RSS1-RSS2
+ RSS2-RSS3
+ 
 ```
 
-### Type-III SS 
+However, as noted, if you change the order of the variables in the model, the Type-I (sequential) SS will change.
 
-The ANOVA with sequential SS is not invariant with respect to the order in which we entered predictors in the model. To test the significance of each factor, we may want to do it by enetering each factor last in the model. This is called the type-III SS. When we do this, we test whether a particular factor has an effect, after considering all the other factors in the model. The "short" regression or null hypothesis is a model that excludes one factor and the "long" regression is the model that includes all the predictors we are considering.
+**Type-III SS**: quantifies the variability a factor can explain, after accountig for all the other factors in the model.
+
+
 
 
 ```r
