@@ -1,6 +1,8 @@
 <div id="menu" />
 
-## ANOVA
+## ANOVA and Testing
+
+### Topics:
  
   - [1) Testing the model as a whole](#whole-model)
   - [2) Long versus Short regression](#long-short)
@@ -74,7 +76,7 @@ anova(HO,HA)
 <div id="long-short" />
 
 
-## 2) Short Vs Long Regression
+## 2) Long Vs Short Regression
 
 Do experience and education have an effect on wages aftera ccountin for differences in wages due to sex and region?
 
