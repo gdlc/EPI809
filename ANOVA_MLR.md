@@ -2,11 +2,11 @@
 
 ## ANOVA
  
-  - [Testing the model as a whole](#whole-model)
-  - [Long versus Short regression](#long-short)
-  - [1df Test](#1DF)
-  - [Sequential ANOVA](#sequentialANOVA)
-  - [Testing individual factors using Type-III SS](#type-III)
+  - [1) Testing the model as a whole](#whole-model)
+  - [2) Long versus Short regression](#long-short)
+  - [3) 1-DF Test](#1DF)
+  - [4) Sequential ANOVA](#sequentialANOVA)
+  - [5) Testing individual factors using Type-III SS](#type-III)
 
 
 <div id="whole-model" />
@@ -74,7 +74,7 @@ anova(HO,HA)
 <div id="long-short" />
 
 
-## Short Vs Long Regression
+## 2) Short Vs Long Regression
 
 Do experience and education have an effect on wages aftera ccountin for differences in wages due to sex and region?
 
@@ -91,7 +91,7 @@ Do experience and education have an effect on wages aftera ccountin for differen
 [Back to menu](#menu)
 
 
-## 1DF Test: F- and t-test
+### 3) 1DF Test: F- and t-test
 
 
 <div id="1DF" />
@@ -122,7 +122,7 @@ Research question: Does sex have an effect on wages aftera accountig for differe
 <div id="sequentialANOVA" />
 
 
-**Sequential ANOVA**
+### 4) Sequential ANOVA
 
 When we apply the `anova` function to a fitted model we obtain a decomposition of the variance for each factor. By default, R performs sequential ANOVA. Sequential (or type-I) ANOVA is not invariant to the order in which predictors enter in the model. The following example reproduces the sequential ANOVA produce by `anova()` using sequential regressions. 
 
@@ -164,8 +164,7 @@ However, as noted, if you change the order of the variables in the model, the Ty
 
 <div id="type-III" />
 
-**Type-III SS**: quantifies the variability a factor can explain, after accountig for all the other factors in the model.
-
+### 5) Type-III SS: quantifies the variability a factor can explain, after accountig for all the other factors in the model.
 
 
 ```r
