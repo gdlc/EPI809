@@ -117,7 +117,7 @@ Research question: Does sex have an effect on wages aftera accountig for differe
 
 
 
-<div id="typeIII" />
+<div id="type-III" />
 
 **Sequential ANOVA**
 
