@@ -166,7 +166,10 @@ However, as noted, if you change the order of the variables in the model, the Ty
 
 <div id="type-III" />
 
-### 5) Type-III SS: quantifies the variability a factor can explain, after accountig for all the other factors in the model.
+### 5) Type-III SS
+
+Type-III sum of squares quantifies the variability a factor can explain, after accountig for all the other factors in the model.
+ANOVA tables computed using Type-III SS can be used to test individual factors, in each test, the null hypothesis accounts for all the other factors.
 
 
 ```r
