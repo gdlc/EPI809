@@ -2,23 +2,20 @@
  
   - [Testing the model as a whole](#whole-model)
 
-**The `anova` function applied to multiple-linear regression models**
-
-```r
-Y=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=TRUE)
-fm=lm(wage~education+region+married+experience+union+sex+ethnicity,data=Y)
-summary(fm)
-
-```
 
 <div id="whole-model" />
+
 **Testing the model as a whole**: 
+
 
 H0: all coefficients, except the intercept, are equal to zero.
 
 ```r
- fm0=lm(wage~1,data=Y)
- anova(fm0,fm)
+
+ Y=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=TRUE)
+ HA=lm(wage~education+region+married+experience+union+sex+ethnicity,data=Y)
+ H0=lm(wage~1,data=Y)
+ anova(HO,HA)
  
  # Reproducing the ANOVA table
  y=Y$wage
