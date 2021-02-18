@@ -5,7 +5,7 @@
   - [Testing the model as a whole](#whole-model)
   - [Long versus Short regression](#long-short)
   - [1df Test](#1DF)
-  - [Testing individual factors using Type-III SS](#typeIII)
+  - [Testing individual factors using Type-III SS](#type-III)
 
 
 <div id="whole-model" />
@@ -92,9 +92,11 @@ Do experience and education have an effect on wages aftera ccountin for differen
 
 ## 1DF Test: F- and t-test
 
-Research question: Does sex have an effect on wages aftera accountig for differences due to region, experience and education?
 
 <div id="1DF" />
+
+Research question: Does sex have an effect on wages aftera accountig for differences due to region, experience and education?
+
 ```r
  Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
  head(Y)
@@ -112,6 +114,7 @@ Research question: Does sex have an effect on wages aftera accountig for differe
  summary(HA)$coef[5,3]^2
 ```
 [Back to menu](#menu)
+
 
 
 <div id="typeIII" />
