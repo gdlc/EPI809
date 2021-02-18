@@ -68,7 +68,7 @@ anova(HO,HA)
   anova(fm0,fm)
   
 ```
-[Back to menu](#whole-model)
+[Back to menu](#menu)
 
 <div id="long-short" />
 
@@ -89,13 +89,12 @@ anova(fmS)
 anova(fmS,fmL)
 
 ```
-[Back to menu](#whole-model)
+[Back to menu](#menu)
 
 
 <div id="1DF" />
 
-[Back to menu](#whole-model)
-
+[Back to menu](#menu)
 
 
 <div id="typeIII" />
@@ -182,5 +181,5 @@ Anova(fm,type='III') # SS when each factor is entered last
 
 ```
 
-
+[Back to menu](#menu)
 
