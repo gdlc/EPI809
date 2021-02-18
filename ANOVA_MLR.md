@@ -1,6 +1,9 @@
 ### ANOVA
  
   - [Testing the model as a whole](#whole-model)
+  - [Long versus Short regression](#long-short)
+  - [1df Test](#1DF)
+  - [Testing individual factors using Type-III SS](#typeIII)
 
 
 <div id="whole-model" />
@@ -48,6 +51,15 @@ H0: all coefficients, except the intercept, are equal to zero.
   anova(fm0,fm)
   
 ```
+
+<div id="long-short" />
+
+<div id="1DF" />
+
+
+
+<div id="typeIII" />
+
 
 **Sequential ANOVA**
 
