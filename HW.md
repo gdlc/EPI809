@@ -51,7 +51,7 @@ In the HW you will use the [gout](https://github.com/gdlc/EPI809/blob/master/gou
 **1.  Preliminary, descriptive analysis**
 
 Present:
-- A histogram of serum urate and one of log-serum urate. 
+- A histogram of serum urate (labeled as UricAcid) and one historgram for the logarithm of serum urate. 
 - Boxplots of log-urate versus sex and race.
 - Scatter plot of log-urate versus age.
 
