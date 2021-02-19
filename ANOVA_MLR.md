@@ -92,11 +92,10 @@ Do experience and education have an effect on wages aftera ccountin for differen
 ```
 [Back to menu](#menu)
 
+<div id="1DF" />
 
 ### 3) 1DF Test: F- and t-test
 
-
-<div id="1DF" />
 
 Research question: Does sex have an effect on wages aftera accountig for differences due to region, experience and education?
 
@@ -117,8 +116,6 @@ Research question: Does sex have an effect on wages aftera accountig for differe
  summary(HA)$coef[5,3]^2
 ```
 [Back to menu](#menu)
-
-
 
 
 <div id="sequentialANOVA" />
