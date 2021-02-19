@@ -171,6 +171,11 @@ ANOVA tables computed using Type-III SS can be used to test individual factors, 
 
 ```r
 #install.packages(pkg='car',repos='https://cran.r-project.org/')
+
+Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
+head(Y)
+Y$region=factor(Y$region,levels=c('North','South'))
+
 library(car)
 anova(fm) # produces sequential ANOVA
 Anova(fm,type='III') # SS when each factor is entered last
@@ -195,6 +200,13 @@ Anova(fm,type='III') # SS when each factor is entered last
 # RSS
  sum(residual(fm)^2)
 
+```
+
+For 1DF tests the p-values derived from an F-test based Type-III SS is equivalent to the t-test
+
+```r
+ summary(fm)
+ Anova(fm)
 ```
 
 [Back to menu](#menu)
