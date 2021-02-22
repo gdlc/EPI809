@@ -175,6 +175,7 @@ ANOVA tables computed using Type-III SS can be used to test individual factors, 
 Y=read.table('https://raw.githubusercontent.com/gdlc/EPI809/master/wages.txt',header=T)
 head(Y)
 Y$region=factor(Y$region,levels=c('North','South'))
+fm=lm(wage~education+sex+ethnicity,data=Y)
 
 library(car)
 anova(fm) # produces sequential ANOVA
