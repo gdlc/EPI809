@@ -1,6 +1,6 @@
 ## Interactions in Linear models
 
-###(1) Factor-by-factor
+### 1) Factor-by-factor
 
 Is the sex-wage gap different in the south and north regions?
 
@@ -30,7 +30,7 @@ Is the sex-wage gap different in the south and north regions?
   
 ```
 
-###(1) Factor-by-covariate
+### 2) Factor-by-covariate
 
 ```r
 
