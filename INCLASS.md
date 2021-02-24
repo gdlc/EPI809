@@ -384,11 +384,58 @@ Using the [gout](https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt) 
 
 ### In-class 9: Testing in the MLR model
 
-**(1) Using the gout data set test the following research questions**: 
+** Using the gout data set test the following research questions**: 
 
-    - Does BMI, race, age, or sex have any effect on SBP?
-    - Afer accounting for differences due to race and sex, does BMI or age have any effect on SBP?
-    - After accounting for differences due to sex, age, and race, does BMI has an effect on SBP?
+    - (9.1) Does BMI, race, age, or sex have any effect on SBP?
+    - (9.2) Afer accounting for differences due to race and sex, does BMI or age have any effect on SBP?
+    - (9.3) After accounting for differences due to sex, age, and race, does BMI has an effect on SBP?
 
 For each of the above questions: identify the null and alternativy hypothesis, identify an adequate test (i.e., t or F test),  implement the test, and state your conclusions.
  
+**Proposed solution**
+
+**9.1** 
+
+This amounts to test the model as a whole. Rejection implies that at least one of the effects is different than zero. We use ANOVA+Ftest
+ 
+```r
+ DATA=read.table(file='https://raw.githubusercontent.com/gdlc/EPI809/master/gout.txt',header=TRUE,sep=' ')
+ HA=lm(SBP~BMI+Race+Age+Sex,data=DATA)
+ H0=lm(SBP~1,data=DATA)
+ anova(H0,HA)
+```
+
+**9.2**
+
+This is an instance of the *long-versus-short* regressions. The null includes the effects we want to contidion on, the alternative includes those effects plus the ones we want to test.
+
+```r
+ HA=lm(SBP~BMI+Race+Age+Sex,data=DATA)
+ H0=lm(SBP~Race+Sex,data=DATA)
+ anova(H0,HA)
+
+```
+
+**9.3**
+
+This is a 1DF-test, the alternative is HA from the previous examples, the null dorps just BMI from HA. The p-value can be obtained using ANOVA+Ftest or directly from the t-test.'
+
+```r
+ HA=lm(SBP~Race+Age+Sex+BMI,data=DATA)
+ H0=lm(SBP~Race+Age+Sex,data=DATA)
+ anova(H0,HA)
+ summary(HA)
+ 
+```
+
+### In-class 10: Multiple testing
+
+Using the testing procedure we discussed in class (last slide), test which of the factors included in the following model have significant effects on Uric Acid.
+
+Describe the procedure you are following, and state your conclussions.
+
+```r
+ fm=lm(UricAcid~Creatinine+BMI+SBP+Sex+Age+Race,data=DATA)
+```
+
+
